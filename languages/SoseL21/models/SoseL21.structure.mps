@@ -127,6 +127,7 @@
     <node concept="1TJgyj" id="5$OfM9zAHfV" role="1TKVEi">
       <property role="IQ2ns" value="6427831985097069563" />
       <property role="20kJfa" value="variableReference" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5$OfM9zAHcz" resolve="Declarations" />
     </node>
   </node>
@@ -287,6 +288,17 @@
     <property role="TrG5h" value="ArithmeticBinaryExpression" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="bkc1BI3FGn" resolve="BinaryExpression" />
+  </node>
+  <node concept="1TIwiD" id="2tELiO03x6M">
+    <property role="EcuMT" value="2840299312075641266" />
+    <property role="TrG5h" value="VariableReference" />
+    <ref role="1TJDcQ" node="bkc1BI3nlV" resolve="Expression" />
+    <node concept="1TJgyj" id="2tELiO03x6N" role="1TKVEi">
+      <property role="IQ2ns" value="2840299312075641267" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5$OfM9zAHcz" resolve="Declarations" />
+    </node>
   </node>
 </model>
 

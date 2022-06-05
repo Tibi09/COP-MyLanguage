@@ -14,6 +14,7 @@
   <languageVersions>
     <language slang="l:878ac2f6-f08d-488e-902b-dd37276ba538:Interpreter" version="0" />
     <language slang="l:675036cf-295d-4c04-a418-8a54769c9d5c:SoseL21" version="0" />
+    <language slang="l:d841915f-9308-4767-8fc4-b848d3400faf:TestLanguage" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>

@@ -721,32 +721,8 @@
                       </node>
                     </node>
                     <node concept="2MkqsV" id="2tELiNZZtMb" role="3cqZAp">
-                      <node concept="3cpWs3" id="2tELiO02NsN" role="2MkJ7o">
-                        <node concept="1Z2H0r" id="2tELiO02NAb" role="3uHU7w">
-                          <node concept="2OqwBi" id="2tELiO02NSP" role="1Z2MuG">
-                            <node concept="1YBJjd" id="2tELiO02NCT" role="2Oq$k0">
-                              <ref role="1YBMHb" node="2tELiNZZ7Dd" resolve="binaryExpression" />
-                            </node>
-                            <node concept="3TrEf2" id="2tELiO02Ofn" role="2OqNvi">
-                              <ref role="3Tt5mk" to="kz24:bkc1BI3FGq" resolve="right" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="3cpWs3" id="2tELiO02HFK" role="3uHU7B">
-                          <node concept="Xl_RD" id="2tELiNZZtM$" role="3uHU7B">
-                            <property role="Xl_RC" value="operation not supported" />
-                          </node>
-                          <node concept="1Z2H0r" id="2tELiO02HMi" role="3uHU7w">
-                            <node concept="2OqwBi" id="2tELiO02I5W" role="1Z2MuG">
-                              <node concept="1YBJjd" id="2tELiO02HSZ" role="2Oq$k0">
-                                <ref role="1YBMHb" node="2tELiNZZ7Dd" resolve="binaryExpression" />
-                              </node>
-                              <node concept="3TrEf2" id="2tELiO02Irz" role="2OqNvi">
-                                <ref role="3Tt5mk" to="kz24:bkc1BI3FGo" resolve="left" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
+                      <node concept="Xl_RD" id="2tELiNZZtM$" role="2MkJ7o">
+                        <property role="Xl_RC" value="operation not supported" />
                       </node>
                       <node concept="1YBJjd" id="2tELiNZZtNj" role="1urrMF">
                         <ref role="1YBMHb" node="2tELiNZZ7Dd" resolve="binaryExpression" />

@@ -36,6 +36,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNumberLiteral = createDescriptorForNumberLiteral();
   /*package*/ final ConceptDescriptor myConceptPlusExpression = createDescriptorForPlusExpression();
   /*package*/ final ConceptDescriptor myConceptReference = createDescriptorForReference();
+  /*package*/ final ConceptDescriptor myConceptVariableReference = createDescriptorForVariableReference();
   /*package*/ final ConceptDescriptor myConceptWorkspace = createDescriptorForWorkspace();
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -51,7 +52,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptArithmeticBinaryExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptDeclarations, myConceptDeclarationsAndReferences, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualsExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterEqualsExpression, myConceptGreaterThanExpression, myConceptIntDeclaration, myConceptLowerEqualsExpression, myConceptLowerThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptReference, myConceptWorkspace);
+    return Arrays.asList(myConceptArithmeticBinaryExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptDeclarations, myConceptDeclarationsAndReferences, myConceptDivExpression, myConceptEmptyStatement, myConceptEqualsExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterEqualsExpression, myConceptGreaterThanExpression, myConceptIntDeclaration, myConceptLowerEqualsExpression, myConceptLowerThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptReference, myConceptVariableReference, myConceptWorkspace);
   }
 
   @Override
@@ -104,6 +105,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPlusExpression;
       case LanguageConceptSwitch.Reference:
         return myConceptReference;
+      case LanguageConceptSwitch.VariableReference:
+        return myConceptVariableReference;
       case LanguageConceptSwitch.Workspace:
         return myConceptWorkspace;
       default:
@@ -319,8 +322,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L);
     b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/6427831985097069323");
     b.version(2);
-    b.associate("variableReference", 0x59343f22639ad3fbL).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad323L).optional(true).origin("6427831985097069563").done();
+    b.associate("variableReference", 0x59343f22639ad3fbL).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad323L).optional(false).origin("6427831985097069563").done();
     b.alias("ref");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVariableReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("SoseL21", "VariableReference", 0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52d000e11b2L);
+    b.class_(false, false, false);
+    b.super_("SoseL21.structure.Expression", 0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL);
+    b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/2840299312075641266");
+    b.version(2);
+    b.associate("variable", 0x276ac52d000e11b3L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad323L).optional(false).origin("2840299312075641267").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWorkspace() {

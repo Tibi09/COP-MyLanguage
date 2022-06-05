@@ -32,6 +32,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NumberLiteral;
   private ConceptPresentation props_PlusExpression;
   private ConceptPresentation props_Reference;
+  private ConceptPresentation props_VariableReference;
   private ConceptPresentation props_Workspace;
 
   @Override
@@ -195,6 +196,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Reference = cpb.create();
         }
         return props_Reference;
+      case LanguageConceptSwitch.VariableReference:
+        if (props_VariableReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52d000e11b2L, 0x276ac52d000e11b3L, "variable", "", "");
+          props_VariableReference = cpb.create();
+        }
+        return props_VariableReference;
       case LanguageConceptSwitch.Workspace:
         if (props_Workspace == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

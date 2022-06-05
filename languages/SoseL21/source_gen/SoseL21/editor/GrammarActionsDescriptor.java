@@ -15,20 +15,23 @@ import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import org.jetbrains.mps.openapi.language.SConcept;
 import com.mbeddr.mpsutil.grammarcells.runtime.GrammarCellsUtil;
+import org.jetbrains.mps.openapi.language.SConcept;
+import com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuItem;
+import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.smodel.action.SNodeFactoryOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.editor.menus.substitute.DefaultSubstituteMenuLookup;
 import jetbrains.mps.smodel.language.LanguageRegistry;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.openapi.editor.EditorContext;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuItem;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.lang.editor.menus.substitute.SubstituteMenuItemWrapper;
-import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.action.NodeFactoryManager;
-import com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuItem;
 import jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuItem;
 import jetbrains.mps.openapi.editor.menus.transformation.TransformationMenuContext;
 import jetbrains.mps.lang.editor.menus.transformation.MenuLocations;
@@ -39,7 +42,6 @@ import jetbrains.mps.core.aspects.constraints.rules.kinds.ContainmentContext;
 import com.mbeddr.mpsutil.grammarcells.runtime.MultiTextActionItem;
 import jetbrains.mps.smodel.presentation.NodePresentationUtil;
 import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import jetbrains.mps.editor.runtime.selection.SelectionUtil;
 import com.mbeddr.mpsutil.grammarcells.runtime.SavedCaretPosition;
 import jetbrains.mps.openapi.editor.cells.SubstituteAction;
@@ -74,6 +76,73 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
 
 
           return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "NumberLiteral", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077969893")));
+          try {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.NumberLiteral$Pl)) {
+              final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
+
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.NumberLiteral$Pl, _context.getModel(), NumberLiteral_Editor.class, _context.getEditorContext()))) {
+                final SConcept outputConcept = ((SConcept) subconcept);
+
+                if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConcept))) {
+                  boolean isApplicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                  if (isApplicable) {
+                    ListSequence.fromList(result).addElement(new GrammarCellsSubstituteMenuItem(_context) {
+                      private SProperty myProperty = PROPS.value$sibJ;
+
+                      public String getMatchingText(String pattern) {
+                        return pattern;
+                      }
+                      @Override
+                      public boolean canExecute(@NotNull String pattern) {
+                        if ((pattern == null || pattern.length() == 0)) {
+                          return false;
+                        }
+                        return GrammarCellsUtil.isValidPropertyValue(myProperty, expectedOutputConceptExactly, pattern);
+                      }
+                      @Override
+                      public boolean canExecuteStrictly(@NotNull String pattern) {
+                        return canExecute(pattern);
+                      }
+
+                      @Override
+                      public SNode createNode(@NotNull String pattern) {
+                        SNode newNode = SNodeFactoryOperations.createNewNode(expectedOutputConceptExactly, null);
+                        SPropertyOperations.assign(newNode, PROPS.value$sibJ, GrammarCellsUtil.toInternalPropertyValue(myProperty, pattern));
+
+                        return newNode;
+                      }
+
+
+                      @Override
+                      public void select(@NotNull SNode newNode, @NotNull String pattern) {
+                        super.select(newNode, pattern);
+                      }
+
+                      @Override
+                      public SAbstractConcept getOutputConcept() {
+                        return CONCEPTS.NumberLiteral$Pl;
+                      }
+                    });
+                  }
+                }
+
+              }
+            }
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
         }
       }.query()));
       ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
@@ -232,6 +301,151 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }).toListSequence();
         }
       }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "ExpressionStatement", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077810923")));
+          try {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.ExpressionStatement$jS)) {
+              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$li;
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.ExpressionStatement$jS, _context.getModel(), ExpressionStatement_Editor.class, _context.getEditorContext()))) {
+                final SConcept outputConcept = ((SConcept) subconcept);
+
+                final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
+
+                boolean wrapRequired = !(SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(wrappedConcept), SNodeOperations.asSConcept(expectedOutputConcept)));
+                if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConcept)) && wrapRequired) {
+
+                  boolean isApplicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                  if (isApplicable) {
+                    List<SubstituteMenuItem> actions = _context.withLink(LINKS.expr$Jxtf).createItems(new DefaultSubstituteMenuLookup(LanguageRegistry.getInstance(_context.getEditorContext().getRepository()), wrappedConcept));
+                    List<SubstituteMenuItem> wrappedActions = ListSequence.fromList(actions).where(new IWhereFilter<SubstituteMenuItem>() {
+                      public boolean accept(SubstituteMenuItem it) {
+                        boolean isApplicable = true;
+                        final SAbstractConcept wrappedConcept = it.getOutputConcept();
+                        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(wrappedConcept), SNodeOperations.asSConcept(expectedOutputConcept))) {
+                          return false;
+                        }
+                        final EditorContext editorContext = _context.getEditorContext();
+                        final SNode smartReferent = ((it instanceof ReferenceScopeSubstituteMenuItem) ? ((SNode) ReflectionUtil_copy.readField(ReferenceScopeSubstituteMenuItem.class, ((ReferenceScopeSubstituteMenuItem) it), "myReferent")) : null);
+
+                        return isApplicable;
+                      }
+                    }).select(new ISelector<SubstituteMenuItem, SubstituteMenuItem>() {
+                      public SubstituteMenuItem select(SubstituteMenuItem it) {
+                        final SNode smartReferent = ((it instanceof ReferenceScopeSubstituteMenuItem) ? ((SNode) ReflectionUtil_copy.readField(ReferenceScopeSubstituteMenuItem.class, ((ReferenceScopeSubstituteMenuItem) it), "myReferent")) : null);
+
+                        SubstituteMenuItem wrapper = new SubstituteMenuItemWrapper(it) {
+                          private SNode wrappedNode;
+                          @Override
+                          public SNode createNode(@NotNull String pattern) {
+                            SNode nodeToWrap = super.createNode(pattern);
+                            wrappedNode = nodeToWrap;
+                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
+                            SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
+                            SLinkOperations.setTarget(wrapper, LINKS.expr$Jxtf, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$li));
+                            NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
+
+                            return wrapper;
+                          }
+                          @Override
+                          public SAbstractConcept getOutputConcept() {
+                            return outputConcept;
+                          }
+
+                          @Override
+                          public void select(@NotNull SNode createdNode, @NotNull String pattern) {
+                            GrammarCellsSubstituteMenuItem.select(_context.getEditorContext().getEditorComponent(), createdNode);
+                          }
+                        };
+                        return wrapper;
+                      }
+                    }).toListSequence();
+
+                    ListSequence.fromList(result).addSequence(ListSequence.fromList(wrappedActions));
+                  }
+
+                }
+              }
+            }
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BooleanLiteral", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077969903")));
+          try {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.BooleanLiteral$pX)) {
+              final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
+
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.BooleanLiteral$pX, _context.getModel(), BooleanLiteral_Editor.class, _context.getEditorContext()))) {
+                final SConcept outputConcept = ((SConcept) subconcept);
+
+                if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConcept))) {
+                  boolean isApplicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                  if (isApplicable) {
+                    ListSequence.fromList(result).addElement(new GrammarCellsSubstituteMenuItem(_context) {
+                      private SProperty myProperty = PROPS.value$D4vJ;
+
+                      public String getMatchingText(String pattern) {
+                        return pattern;
+                      }
+                      @Override
+                      public boolean canExecute(@NotNull String pattern) {
+                        if ((pattern == null || pattern.length() == 0)) {
+                          return false;
+                        }
+                        return GrammarCellsUtil.isValidPropertyValue(myProperty, expectedOutputConceptExactly, pattern);
+                      }
+                      @Override
+                      public boolean canExecuteStrictly(@NotNull String pattern) {
+                        return canExecute(pattern);
+                      }
+
+                      @Override
+                      public SNode createNode(@NotNull String pattern) {
+                        SNode newNode = SNodeFactoryOperations.createNewNode(expectedOutputConceptExactly, null);
+                        SPropertyOperations.assign(newNode, PROPS.value$D4vJ, GrammarCellsUtil.toInternalPropertyValue(myProperty, pattern));
+
+                        return newNode;
+                      }
+
+
+                      @Override
+                      public void select(@NotNull SNode newNode, @NotNull String pattern) {
+                        super.select(newNode, pattern);
+                      }
+
+                      @Override
+                      public SAbstractConcept getOutputConcept() {
+                        return CONCEPTS.BooleanLiteral$pX;
+                      }
+                    });
+                  }
+                }
+
+              }
+            }
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
+        }
+      }.query()));
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -250,6 +464,29 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     _context.getEditorMenuTrace().pushTraceInfo();
     _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("SoseL21.editor.GrammarActionsDescriptor.doGetSideTransformActions", null));
     try {
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "NumberLiteral", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077969893")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
       {
         boolean sideEnabled = false;
         sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
@@ -442,6 +679,52 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }.query(_context)));
         }
       }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "ExpressionStatement", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077810923")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BooleanLiteral", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077969903")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -521,13 +804,22 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     return rules;
   }
 
+  private static final class PROPS {
+    /*package*/ static final SProperty value$sibJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, 0x2d43019ee0a41c2L, "value");
+    /*package*/ static final SProperty value$D4vJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, 0x561e0268e531fa1bL, "value");
+  }
+
   private static final class CONCEPTS {
+    /*package*/ static final SConcept NumberLiteral$Pl = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, "SoseL21.structure.NumberLiteral");
     /*package*/ static final SConcept Expression$li = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL, "SoseL21.structure.Expression");
     /*package*/ static final SConcept BinaryExpression$pO = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L, "SoseL21.structure.BinaryExpression");
+    /*package*/ static final SConcept ExpressionStatement$jS = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5321d9ecfadfa2d1L, "SoseL21.structure.ExpressionStatement");
+    /*package*/ static final SConcept BooleanLiteral$pX = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, "SoseL21.structure.BooleanLiteral");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink left$B25J = MetaAdapterFactory.getContainmentLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L, 0x2d43019ee0ebb18L, "left");
     /*package*/ static final SContainmentLink right$B2zL = MetaAdapterFactory.getContainmentLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L, 0x2d43019ee0ebb1aL, "right");
+    /*package*/ static final SContainmentLink expr$Jxtf = MetaAdapterFactory.getContainmentLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5321d9ecfadfa2d1L, 0x5321d9ecfadfa2d2L, "expr");
   }
 }

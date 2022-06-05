@@ -32,7 +32,8 @@ public final class LanguageConceptSwitch {
   public static final int NumberLiteral = 20;
   public static final int PlusExpression = 21;
   public static final int Reference = 22;
-  public static final int Workspace = 23;
+  public static final int VariableReference = 23;
+  public static final int Workspace = 24;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x675036cf295d4c04L, 0xa4188a54769c9d5cL);
@@ -59,6 +60,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x2d43019ee0a41c1L, NumberLiteral);
     builder.put(0x2d43019ee0d8120L, PlusExpression);
     builder.put(0x59343f22639ad30bL, Reference);
+    builder.put(0x276ac52d000e11b2L, VariableReference);
     builder.put(0x59343f22639a8002L, Workspace);
     myIndex = builder.seal();
   }

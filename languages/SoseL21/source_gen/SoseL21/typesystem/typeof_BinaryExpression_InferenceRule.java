@@ -53,7 +53,7 @@ public class typeof_BinaryExpression_InferenceRule extends AbstractInferenceRule
                   }
                   {
                     final MessageTarget errorTarget = new NodeMessageTarget();
-                    IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(binaryExpression, "operation not supported" + typeCheckingContext.typeOf(SLinkOperations.getTarget(binaryExpression, LINKS.left$B25J), "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2840299312075431058", true) + typeCheckingContext.typeOf(SLinkOperations.getTarget(binaryExpression, LINKS.right$B2zL), "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2840299312075454859", true), "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2840299312074579083", null, errorTarget);
+                    IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(binaryExpression, "operation not supported", "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2840299312074579083", null, errorTarget);
                   }
                 }
               }
