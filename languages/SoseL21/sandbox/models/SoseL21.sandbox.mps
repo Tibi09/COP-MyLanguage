@@ -26,6 +26,7 @@
       <concept id="6427831985097069323" name="SoseL21.structure.Reference" flags="ng" index="UFIKD">
         <reference id="6427831985097069563" name="variableReference" index="UFINp" />
       </concept>
+      <concept id="2840299312074419437" name="SoseL21.structure.GreaterThanExpression" flags="ng" index="3o$qB1" />
       <concept id="203840771064906225" name="SoseL21.structure.DivExpression" flags="ng" index="3GLf7C" />
       <concept id="203840771064956013" name="SoseL21.structure.EqialsExpression" flags="ng" index="3GLrhO" />
       <concept id="203840771064693024" name="SoseL21.structure.PlusExpression" flags="ng" index="3GQr4T" />
@@ -112,6 +113,16 @@
           <property role="3GRB7r" value="8" />
         </node>
         <node concept="3GRB7o" id="2tELiNZYM95" role="3GQCG1">
+          <property role="3GRB7r" value="7" />
+        </node>
+      </node>
+    </node>
+    <node concept="2DZBGX" id="2tELiNZYR_J" role="UFFXR">
+      <node concept="3o$qB1" id="2tELiNZYR_L" role="2DZBGY">
+        <node concept="3GRB7o" id="2tELiNZYRAp" role="3GQCG3">
+          <property role="3GRB7r" value="3" />
+        </node>
+        <node concept="3GRB7o" id="2tELiNZYR_I" role="3GQCG1">
           <property role="3GRB7r" value="7" />
         </node>
       </node>

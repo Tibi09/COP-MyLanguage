@@ -23,6 +23,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEqialsExpression = createDescriptorForEqialsExpression();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptExpressionStatement = createDescriptorForExpressionStatement();
+  /*package*/ final ConceptDescriptor myConceptGreaterThanExpression = createDescriptorForGreaterThanExpression();
   /*package*/ final ConceptDescriptor myConceptIntDeclaration = createDescriptorForIntDeclaration();
   /*package*/ final ConceptDescriptor myConceptMinusExpression = createDescriptorForMinusExpression();
   /*package*/ final ConceptDescriptor myConceptMulExpression = createDescriptorForMulExpression();
@@ -45,7 +46,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptDeclarations, myConceptDeclarationsAndReferences, myConceptDivExpression, myConceptEmptyStatement, myConceptEqialsExpression, myConceptExpression, myConceptExpressionStatement, myConceptIntDeclaration, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptReference, myConceptWorkspace);
+    return Arrays.asList(myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptDeclarations, myConceptDeclarationsAndReferences, myConceptDivExpression, myConceptEmptyStatement, myConceptEqialsExpression, myConceptExpression, myConceptExpressionStatement, myConceptGreaterThanExpression, myConceptIntDeclaration, myConceptMinusExpression, myConceptMulExpression, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptPlusExpression, myConceptReference, myConceptWorkspace);
   }
 
   @Override
@@ -72,6 +73,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptExpression;
       case LanguageConceptSwitch.ExpressionStatement:
         return myConceptExpressionStatement;
+      case LanguageConceptSwitch.GreaterThanExpression:
+        return myConceptGreaterThanExpression;
       case LanguageConceptSwitch.IntDeclaration:
         return myConceptIntDeclaration;
       case LanguageConceptSwitch.MinusExpression:
@@ -184,6 +187,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/5990308591223939793");
     b.version(2);
     b.aggregate("expr", 0x5321d9ecfadfa2d2L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL).optional(false).ordered(true).multiple(false).origin("5990308591223939794").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGreaterThanExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("SoseL21", "GreaterThanExpression", 0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52cfffb6cedL);
+    b.class_(false, false, false);
+    b.super_("SoseL21.structure.BinaryExpression", 0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L);
+    b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/2840299312074419437");
+    b.version(2);
+    b.alias(">");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIntDeclaration() {

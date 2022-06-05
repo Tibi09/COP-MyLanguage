@@ -6,14 +6,7 @@ package SoseL21.sandbox;
 public class wk1 {
   public static void main(String[] args) {
     int a;
-    int b;
-    int c;
-    int d;
-    int e;
-    int w;
-    int pp;
-    boolean ddd;
-    boolean sd;
-    int ksdfm;
+    boolean ugabuga;
+    int df;
   }
 }

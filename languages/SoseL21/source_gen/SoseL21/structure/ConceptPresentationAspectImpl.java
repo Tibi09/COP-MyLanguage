@@ -19,6 +19,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EqialsExpression;
   private ConceptPresentation props_Expression;
   private ConceptPresentation props_ExpressionStatement;
+  private ConceptPresentation props_GreaterThanExpression;
   private ConceptPresentation props_IntDeclaration;
   private ConceptPresentation props_MinusExpression;
   private ConceptPresentation props_MulExpression;
@@ -100,6 +101,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ExpressionStatement = cpb.create();
         }
         return props_ExpressionStatement;
+      case LanguageConceptSwitch.GreaterThanExpression:
+        if (props_GreaterThanExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation(">");
+          props_GreaterThanExpression = cpb.create();
+        }
+        return props_GreaterThanExpression;
       case LanguageConceptSwitch.IntDeclaration:
         if (props_IntDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

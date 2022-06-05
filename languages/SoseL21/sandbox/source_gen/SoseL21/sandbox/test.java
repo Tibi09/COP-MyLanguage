@@ -5,5 +5,8 @@ package SoseL21.sandbox;
 
 public class test {
   public static void main(String[] args) {
+    int dada;
+    boolean lala;
+    int lkdfmkldf;
   }
 }
