@@ -28,7 +28,7 @@ public final class DivExpression__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static int priority_id5cxQuNUWkcD(@NotNull SAbstractConcept __thisConcept__) {
-    return 1;
+    return 2;
   }
 
   /*package*/ DivExpression__BehaviorDescriptor() {

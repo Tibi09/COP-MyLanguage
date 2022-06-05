@@ -16,15 +16,21 @@
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="kz24" ref="r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
@@ -44,7 +50,9 @@
       <concept id="8966504967485224688" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_contextNode" flags="nn" index="2rP1CM" />
       <concept id="1147467115080" name="jetbrains.mps.lang.constraints.structure.NodePropertyConstraint" flags="ng" index="EnEH3">
         <reference id="1147467295099" name="applicableProperty" index="EomxK" />
+        <child id="1212097481299" name="propertyValidator" index="QCWH9" />
       </concept>
+      <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
       <concept id="5564765827938091039" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ig" index="3dgokm" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
@@ -55,6 +63,7 @@
         <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
         <child id="1148687345559" name="searchScopeFactory" index="1N6uqs" />
       </concept>
+      <concept id="1153138554286" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_propertyValue" flags="nn" index="1Wqviy" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
@@ -112,11 +121,65 @@
         </node>
       </node>
     </node>
+    <node concept="EnEH3" id="2tELiO034hB" role="1MhHOB">
+      <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
+      <node concept="QB0g5" id="2tELiO034jD" role="QCWH9">
+        <node concept="3clFbS" id="2tELiO034jE" role="2VODD2">
+          <node concept="3clFbF" id="2tELiO034kK" role="3cqZAp">
+            <node concept="2OqwBi" id="2tELiO034FB" role="3clFbG">
+              <node concept="1Wqviy" id="2tELiO034kJ" role="2Oq$k0" />
+              <node concept="liA8E" id="2tELiO0358b" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
+                <node concept="Xl_RD" id="2tELiO0359e" role="37wK5m">
+                  <property role="Xl_RC" value="[a-zA-Z][a-zA-Z0-9]*" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1M2fIO" id="bkc1BI2XCA">
     <ref role="1M2myG" to="kz24:5$OfM9zAC1n" resolve="IntDeclaration" />
     <node concept="EnEH3" id="bkc1BI3n6$" role="1MhHOB">
-      <ref role="EomxK" to="kz24:bkc1BI2rcf" resolve="static" />
+      <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
+      <node concept="QB0g5" id="2tELiO02qDc" role="QCWH9">
+        <node concept="3clFbS" id="2tELiO02qDd" role="2VODD2">
+          <node concept="3clFbF" id="2tELiO02qIE" role="3cqZAp">
+            <node concept="2OqwBi" id="2tELiO02r99" role="3clFbG">
+              <node concept="1Wqviy" id="2tELiO02qID" role="2Oq$k0" />
+              <node concept="liA8E" id="2tELiO02rut" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
+                <node concept="Xl_RD" id="2tELiO02rvw" role="37wK5m">
+                  <property role="Xl_RC" value="[a-zA-Z][a-zA-Z0-9]*" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2tELiO02w1g">
+    <ref role="1M2myG" to="kz24:5$OfM9zAC23" resolve="BooleanDeclaration" />
+    <node concept="EnEH3" id="2tELiO02w1h" role="1MhHOB">
+      <ref role="EomxK" to="tpck:h0TrG11" resolve="name" />
+      <node concept="QB0g5" id="2tELiO02w22" role="QCWH9">
+        <node concept="3clFbS" id="2tELiO02w23" role="2VODD2">
+          <node concept="3clFbF" id="2tELiO02wiR" role="3cqZAp">
+            <node concept="2OqwBi" id="2tELiO02wI7" role="3clFbG">
+              <node concept="1Wqviy" id="2tELiO02wiQ" role="2Oq$k0" />
+              <node concept="liA8E" id="2tELiO02x73" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String)" resolve="matches" />
+                <node concept="Xl_RD" id="2tELiO02x86" role="37wK5m">
+                  <property role="Xl_RC" value="[a-zA-z][a-zA-Z0-9]*" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

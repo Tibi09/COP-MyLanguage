@@ -17,8 +17,8 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
-public final class MulExpression__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0e19ddL, "SoseL21.structure.MulExpression");
+public final class GreaterThanExpression__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52cfffb6cedL, "SoseL21.structure.GreaterThanExpression");
 
   public static final SMethod<Integer> priority_id5cxQuNUWkcD = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("priority").modifiers(9, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5cxQuNUWkcD").build();
 
@@ -28,10 +28,10 @@ public final class MulExpression__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static int priority_id5cxQuNUWkcD(@NotNull SAbstractConcept __thisConcept__) {
-    return 2;
+    return 0;
   }
 
-  /*package*/ MulExpression__BehaviorDescriptor() {
+  /*package*/ GreaterThanExpression__BehaviorDescriptor() {
   }
 
   @Override

@@ -17,6 +17,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myMulExpression__BehaviorDescriptor = new MulExpression__BehaviorDescriptor();
   private final BHDescriptor myBinaryExpression__BehaviorDescriptor = new BinaryExpression__BehaviorDescriptor();
   private final BHDescriptor myDivExpression__BehaviorDescriptor = new DivExpression__BehaviorDescriptor();
+  private final BHDescriptor myGreaterThanExpression__BehaviorDescriptor = new GreaterThanExpression__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -30,14 +31,16 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 1:
         return myDivExpression__BehaviorDescriptor;
       case 2:
-        return myMinusExpression__BehaviorDescriptor;
+        return myGreaterThanExpression__BehaviorDescriptor;
       case 3:
-        return myMulExpression__BehaviorDescriptor;
+        return myMinusExpression__BehaviorDescriptor;
       case 4:
+        return myMulExpression__BehaviorDescriptor;
+      case 5:
         return myPlusExpression__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee10c1f1L), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0e19acL), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0e19ddL), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d8120L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee10c1f1L), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52cfffb6cedL), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0e19acL), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0e19ddL), MetaIdFactory.conceptId(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d8120L)).seal();
 }

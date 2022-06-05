@@ -16,9 +16,9 @@ import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class IntDeclaration_Constraints extends BaseConstraintsDescriptor {
-  public IntDeclaration_Constraints() {
-    super(CONCEPTS.IntDeclaration$bc);
+public class BooleanDeclaration_Constraints extends BaseConstraintsDescriptor {
+  public BooleanDeclaration_Constraints() {
+    super(CONCEPTS.BooleanDeclaration$9c);
   }
 
   public static class Name_Property extends BasePropertyConstraintsDescriptor {
@@ -29,12 +29,12 @@ public class IntDeclaration_Constraints extends BaseConstraintsDescriptor {
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
       boolean result = staticValidateProperty(node, SPropertyOperations.castString(propertyValue));
       if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "2840299312075352652"));
+        checkingNodeContext.setBreakingNode(new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "2840299312075374722"));
       }
       return result;
     }
     private static boolean staticValidateProperty(SNode node, String propertyValue) {
-      return propertyValue.matches("[a-zA-Z][a-zA-Z0-9]*");
+      return propertyValue.matches("[a-zA-z][a-zA-Z0-9]*");
     }
   }
   @Override
@@ -45,7 +45,7 @@ public class IntDeclaration_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept IntDeclaration$bc = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, "SoseL21.structure.IntDeclaration");
+    /*package*/ static final SConcept BooleanDeclaration$9c = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, "SoseL21.structure.BooleanDeclaration");
   }
 
   private static final class PROPS {

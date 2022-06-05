@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-dpcj71p4tbxh1g6hp6rzppq7411cl8r">
-  <files names="TypesystemDescriptor.java:check_Workspace_NonTypesystemRule.java:typeof_BooleanLiteral_InferenceRule.java:typeof_EqialsExpression_InferenceRule.java:typeof_MinusExpression_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_PlusExpression_InferenceRule.java" />
+<product version="3" modelHash="35mqtqpzhb4dzajr3e7fyf2xz0uusep">
+  <files names="TypesystemDescriptor.java:check_Workspace_NonTypesystemRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_BooleanDeclaration_InferenceRule.java:typeof_BooleanLiteral_InferenceRule.java:typeof_EqialsExpression_InferenceRule.java:typeof_IntDeclaration_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java" />
 </product>
 
