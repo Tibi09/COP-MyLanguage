@@ -23,17 +23,19 @@ public final class LanguageConceptSwitch {
   public static final int ExpressionStatement = 11;
   public static final int GreaterEqualsExpression = 12;
   public static final int GreaterThanExpression = 13;
-  public static final int IntDeclaration = 14;
-  public static final int LowerEqualsExpression = 15;
-  public static final int LowerThanExpression = 16;
-  public static final int MinusExpression = 17;
-  public static final int MulExpression = 18;
-  public static final int NotEqualsExpression = 19;
-  public static final int NumberLiteral = 20;
-  public static final int PlusExpression = 21;
-  public static final int Reference = 22;
-  public static final int VariableReference = 23;
-  public static final int Workspace = 24;
+  public static final int IfStatement = 14;
+  public static final int IntDeclaration = 15;
+  public static final int LowerEqualsExpression = 16;
+  public static final int LowerThanExpression = 17;
+  public static final int MinusExpression = 18;
+  public static final int MulExpression = 19;
+  public static final int NotEqualsExpression = 20;
+  public static final int NumberLiteral = 21;
+  public static final int PlusExpression = 22;
+  public static final int Reference = 23;
+  public static final int StatementContainer = 24;
+  public static final int VariableReference = 25;
+  public static final int Workspace = 26;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x675036cf295d4c04L, 0xa4188a54769c9d5cL);
@@ -51,6 +53,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x5321d9ecfadfa2d1L, ExpressionStatement);
     builder.put(0x276ac52cfffb7a6bL, GreaterEqualsExpression);
     builder.put(0x276ac52cfffb6cedL, GreaterThanExpression);
+    builder.put(0x66171d77dac8cadaL, IfStatement);
     builder.put(0x59343f22639a8057L, IntDeclaration);
     builder.put(0x276ac52cfffb7a6cL, LowerEqualsExpression);
     builder.put(0x276ac52cfffb7a6aL, LowerThanExpression);
@@ -60,6 +63,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x2d43019ee0a41c1L, NumberLiteral);
     builder.put(0x2d43019ee0d8120L, PlusExpression);
     builder.put(0x59343f22639ad30bL, Reference);
+    builder.put(0x66171d77dac697fcL, StatementContainer);
     builder.put(0x276ac52d000e11b2L, VariableReference);
     builder.put(0x59343f22639a8002L, Workspace);
     myIndex = builder.seal();

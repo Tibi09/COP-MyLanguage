@@ -23,6 +23,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ExpressionStatement;
   private ConceptPresentation props_GreaterEqualsExpression;
   private ConceptPresentation props_GreaterThanExpression;
+  private ConceptPresentation props_IfStatement;
   private ConceptPresentation props_IntDeclaration;
   private ConceptPresentation props_LowerEqualsExpression;
   private ConceptPresentation props_LowerThanExpression;
@@ -32,6 +33,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NumberLiteral;
   private ConceptPresentation props_PlusExpression;
   private ConceptPresentation props_Reference;
+  private ConceptPresentation props_StatementContainer;
   private ConceptPresentation props_VariableReference;
   private ConceptPresentation props_Workspace;
 
@@ -133,6 +135,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GreaterThanExpression = cpb.create();
         }
         return props_GreaterThanExpression;
+      case LanguageConceptSwitch.IfStatement:
+        if (props_IfStatement == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_IfStatement = cpb.create();
+        }
+        return props_IfStatement;
       case LanguageConceptSwitch.IntDeclaration:
         if (props_IntDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -196,6 +205,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Reference = cpb.create();
         }
         return props_Reference;
+      case LanguageConceptSwitch.StatementContainer:
+        if (props_StatementContainer == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_StatementContainer = cpb.create();
+        }
+        return props_StatementContainer;
       case LanguageConceptSwitch.VariableReference:
         if (props_VariableReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
