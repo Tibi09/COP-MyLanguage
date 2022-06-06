@@ -9,9 +9,6 @@
   <imports />
   <registry>
     <language id="d841915f-9308-4767-8fc4-b848d3400faf" name="TestLanguage">
-      <concept id="2840299312075606652" name="TestLanguage.structure.AssertStatement" flags="ng" index="BpOXh">
-        <child id="2840299312075606655" name="expr" index="BpOXi" />
-      </concept>
       <concept id="2840299312075571458" name="TestLanguage.structure.TestCase" flags="ng" index="BpWgJ">
         <child id="2840299312075571538" name="content" index="BpWhZ" />
       </concept>
@@ -22,9 +19,6 @@
     <language id="675036cf-295d-4c04-a418-8a54769c9d5c" name="SoseL21">
       <concept id="2840299312075641266" name="SoseL21.structure.VariableReference" flags="ng" index="Bpdiv">
         <reference id="2840299312075641267" name="variable" index="Bpdiu" />
-      </concept>
-      <concept id="5990308591223939793" name="SoseL21.structure.ExpressionStatement" flags="ng" index="2DZBGX">
-        <child id="5990308591223939794" name="expr" index="2DZBGY" />
       </concept>
       <concept id="6205399986108234266" name="SoseL21.structure.BooleanLiteral" flags="ng" index="2NbZxM">
         <property id="6205399986108234267" name="value" index="2NbZxN" />
@@ -39,11 +33,10 @@
         <child id="203840771065002880" name="value" index="3GLwIp" />
       </concept>
       <concept id="7356380916941900506" name="SoseL21.structure.IfStatement" flags="ng" index="2WRXuH">
+        <child id="7356380916943134480" name="else" index="2WN89B" />
         <child id="7356380916941900546" name="then" index="2WRXpP" />
         <child id="7356380916941900544" name="condition" index="2WRXpR" />
       </concept>
-      <concept id="2840299312074419437" name="SoseL21.structure.GreaterThanExpression" flags="ng" index="3o$qB1" />
-      <concept id="2840299312074422890" name="SoseL21.structure.LowerThanExpression" flags="ng" index="3o$rX6" />
       <concept id="203840771064956013" name="SoseL21.structure.EqualsExpression" flags="ng" index="3GLrhO" />
       <concept id="203840771064693024" name="SoseL21.structure.PlusExpression" flags="ng" index="3GQr4T" />
       <concept id="203840771064732076" name="SoseL21.structure.MinusExpression" flags="ng" index="3GQyAP" />
@@ -76,59 +69,35 @@
         <property role="2NbZxN" value="true" />
       </node>
     </node>
-    <node concept="UFFXP" id="6on7nvqM0JP" role="UFFXR">
-      <property role="TrG5h" value="ls" />
-      <node concept="Bpdiv" id="6on7nvqM0Kf" role="3GRB7a">
-        <ref role="Bpdiu" node="2tELiNZZoCv" resolve="a" />
-      </node>
-    </node>
     <node concept="UFFXP" id="6on7nvqLN6D" role="UFFXR">
       <property role="TrG5h" value="c" />
       <node concept="Bpdiv" id="6on7nvqM0Jk" role="3GRB7a">
         <ref role="Bpdiu" node="2tELiNZZoCv" resolve="a" />
       </node>
     </node>
-    <node concept="3GR4Ta" id="6on7nvqOluH" role="UFFXR" />
-    <node concept="2WRXuH" id="6on7nvqOlvq" role="UFFXR">
-      <node concept="3GRB7o" id="6on7nvqOlvS" role="2WRXpR">
-        <property role="3GRB7r" value="7" />
-      </node>
-      <node concept="UFFXP" id="6on7nvqOlw9" role="2WRXpP">
-        <property role="TrG5h" value="ldkf" />
-        <node concept="3GRB7o" id="6on7nvqOlwx" role="3GRB7a">
-          <property role="3GRB7r" value="0" />
+    <node concept="3GR4Ta" id="6on7nvr5GW7" role="UFFXR" />
+    <node concept="2WRXuH" id="6on7nvr5G_8" role="UFFXR">
+      <node concept="UFFYx" id="6on7nvr7h0u" role="2WN89B">
+        <property role="TrG5h" value="p" />
+        <node concept="2NbZxM" id="6on7nvr7h14" role="3GLwIp">
+          <property role="2NbZxN" value="true" />
         </node>
       </node>
-      <node concept="UFFYx" id="6on7nvqOlxg" role="2WRXpP">
-        <property role="TrG5h" value="f" />
-        <node concept="2NbZxM" id="6on7nvqOlxS" role="3GLwIp">
+      <node concept="3GLrhO" id="6on7nvr5G_$" role="2WRXpR">
+        <node concept="3GRB7o" id="6on7nvr5GA6" role="3GQCG3">
+          <property role="3GRB7r" value="7" />
+        </node>
+        <node concept="Bpdiv" id="6on7nvr5G_r" role="3GQCG1">
+          <ref role="Bpdiu" node="2tELiNZZoCv" resolve="a" />
+        </node>
+      </node>
+      <node concept="UFFYx" id="6on7nvr5GK1" role="2WRXpP">
+        <property role="TrG5h" value="ceva" />
+        <node concept="2NbZxM" id="6on7nvr5GK_" role="3GLwIp">
           <property role="2NbZxN" value="true" />
         </node>
       </node>
     </node>
-    <node concept="3GR4Ta" id="6on7nvqOQj5" role="UFFXR" />
-    <node concept="2WRXuH" id="6on7nvqOQk0" role="UFFXR">
-      <node concept="3GRB7o" id="6on7nvqOQk_" role="2WRXpR">
-        <property role="3GRB7r" value="7" />
-      </node>
-      <node concept="UFFXP" id="6on7nvqOQkS" role="2WRXpP">
-        <property role="TrG5h" value="lskd" />
-        <node concept="3GRB7o" id="6on7nvqOQle" role="3GRB7a">
-          <property role="3GRB7r" value="3" />
-        </node>
-      </node>
-      <node concept="UFFYx" id="6on7nvqOQlX" role="2WRXpP">
-        <property role="TrG5h" value="lkf" />
-        <node concept="2NbZxM" id="6on7nvqOQmD" role="3GLwIp" />
-      </node>
-      <node concept="UFFXP" id="6on7nvqOSQ8" role="2WRXpP">
-        <property role="TrG5h" value="lk" />
-        <node concept="Bpdiv" id="6on7nvqOSUM" role="3GRB7a">
-          <ref role="Bpdiu" node="6on7nvqOQkS" resolve="lskd" />
-        </node>
-      </node>
-    </node>
-    <node concept="3GR4Ta" id="6on7nvqMbOH" role="UFFXR" />
   </node>
   <node concept="BpWni" id="2tELiO03i9t">
     <property role="TrG5h" value="myTests" />
@@ -153,53 +122,6 @@
           </node>
           <node concept="Bpdiv" id="6on7nvqLKOx" role="3GQCG1">
             <ref role="Bpdiu" node="2tELiO03i9w" resolve="klsfm" />
-          </node>
-        </node>
-      </node>
-      <node concept="2DZBGX" id="6on7nvqMc8z" role="BpWhZ">
-        <node concept="3GQr4T" id="6on7nvqMc8O" role="2DZBGY">
-          <node concept="3GRB7o" id="6on7nvqMc9E" role="3GQCG3">
-            <property role="3GRB7r" value="9" />
-          </node>
-          <node concept="Bpdiv" id="6on7nvqMc8x" role="3GQCG1">
-            <ref role="Bpdiu" node="6on7nvqLKNZ" resolve="kl" />
-          </node>
-        </node>
-      </node>
-      <node concept="BpOXh" id="6on7nvqMcb5" role="BpWhZ">
-        <node concept="3o$rX6" id="6on7nvqMcbG" role="BpOXi">
-          <node concept="3GRB7o" id="6on7nvqMcbN" role="3GQCG3">
-            <property role="3GRB7r" value="1" />
-          </node>
-          <node concept="3GRB7o" id="6on7nvqMcby" role="3GQCG1">
-            <property role="3GRB7r" value="1" />
-          </node>
-        </node>
-      </node>
-      <node concept="UFFYx" id="6on7nvqMckx" role="BpWhZ">
-        <property role="TrG5h" value="a" />
-        <node concept="3o$qB1" id="6on7nvqMcuk" role="3GLwIp">
-          <node concept="3GRB7o" id="6on7nvqMcur" role="3GQCG3">
-            <property role="3GRB7r" value="1" />
-          </node>
-          <node concept="3GRB7o" id="6on7nvqMclb" role="3GQCG1">
-            <property role="3GRB7r" value="1" />
-          </node>
-        </node>
-      </node>
-      <node concept="UFFYx" id="6on7nvqMcvC" role="BpWhZ">
-        <property role="TrG5h" value="b" />
-        <node concept="Bpdiv" id="6on7nvqMcwe" role="3GLwIp">
-          <ref role="Bpdiu" node="6on7nvqMckx" resolve="a" />
-        </node>
-      </node>
-      <node concept="BpOXh" id="6on7nvqMcDi" role="BpWhZ">
-        <node concept="3GLrhO" id="6on7nvqMcE1" role="BpOXi">
-          <node concept="Bpdiv" id="6on7nvqMcEI" role="3GQCG3">
-            <ref role="Bpdiu" node="6on7nvqMcvC" resolve="b" />
-          </node>
-          <node concept="Bpdiv" id="6on7nvqMcDR" role="3GQCG1">
-            <ref role="Bpdiu" node="6on7nvqMckx" resolve="a" />
           </node>
         </node>
       </node>

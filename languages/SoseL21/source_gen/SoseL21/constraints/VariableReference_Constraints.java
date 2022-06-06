@@ -9,18 +9,7 @@ import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
-import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
-import org.jetbrains.mps.openapi.model.SNodeReference;
 import jetbrains.mps.smodel.SNodePointer;
-import jetbrains.mps.scope.Scope;
-import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
-import jetbrains.mps.scope.ListScope;
-import jetbrains.mps.internal.collections.runtime.Sequence;
-import SoseL21.behavior.StatementContainer__BehaviorDescriptor;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -37,28 +26,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
       @Nullable
       @Override
       public ReferenceScopeProvider getScopeProvider() {
-        return new BaseScopeProvider() {
-          @Override
-          public SNodeReference getSearchScopeValidatorNode() {
-            return new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "7356380916941703176");
-          }
-          @Override
-          public Scope createScope(final ReferenceConstraintsContext _context) {
-            SNode statementContext = SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.DeclarationsAndReferences$YA, true, false);
-            final Wrappers._int statementIndex = new Wrappers._int();
-            if ((statementContext != null)) {
-              statementIndex.value = SNodeOperations.getIndexInParent(statementContext);
-            } else {
-              statementIndex.value = _context.getPosition();
-            }
-
-            return ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(StatementContainer__BehaviorDescriptor.getStatements_id6on7nvqLDw8.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.StatementContainer$AH, true, false)), CONCEPTS.Declarations$52)).where(new IWhereFilter<SNode>() {
-              public boolean accept(SNode it) {
-                return SNodeOperations.getIndexInParent(it) < statementIndex.value;
-              }
-            }));
-          }
-        };
+        return ReferenceScopeProvider.fromHierarchy(CONCEPTS.Declarations$52, new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "7356380916942658253"));
       }
     };
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
@@ -68,8 +36,6 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept VariableReference$jB = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52d000e11b2L, "SoseL21.structure.VariableReference");
-    /*package*/ static final SInterfaceConcept DeclarationsAndReferences$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.DeclarationsAndReferences");
-    /*package*/ static final SInterfaceConcept StatementContainer$AH = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x66171d77dac697fcL, "SoseL21.structure.StatementContainer");
     /*package*/ static final SInterfaceConcept Declarations$52 = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad323L, "SoseL21.structure.Declarations");
   }
 

@@ -69,7 +69,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="content" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" to="kz24:5$OfM9zAC1i" resolve="DeclarationsAndReferences" />
+      <ref role="20lvS9" to="kz24:5$OfM9zAC1i" resolve="Statement" />
     </node>
   </node>
   <node concept="1TIwiD" id="2tELiO03oDW">
@@ -78,7 +78,7 @@
     <property role="34LRSv" value="assert" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="2tELiO03oDX" role="PzmwI">
-      <ref role="PrY4T" to="kz24:5$OfM9zAC1i" resolve="DeclarationsAndReferences" />
+      <ref role="PrY4T" to="kz24:5$OfM9zAC1i" resolve="Statement" />
     </node>
     <node concept="1TJgyj" id="2tELiO03oDZ" role="1TKVEi">
       <property role="IQ2ns" value="2840299312075606655" />

@@ -27,6 +27,7 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Indent;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -68,7 +69,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     setCellContext(editorCell);
     editorCell.addEditorCell(createCollection_1());
     editorCell.addEditorCell(createConstant_1());
-    editorCell.addEditorCell(createRefNodeList_0());
+    editorCell.addEditorCell(createCollection_2());
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createConstant_3());
     return editorCell;
@@ -125,18 +126,32 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
+  private EditorCell createCollection_2() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_h7tsgb_c0");
+    editorCell.addEditorCell(createIndentCell_0());
+    editorCell.addEditorCell(createRefNodeList_0());
+    return editorCell;
+  }
+  private EditorCell createIndentCell_0() {
+    EditorCell_Indent editorCell = new EditorCell_Indent(getEditorContext(), myNode);
+    return editorCell;
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new contentsListHandler_h7tsgb_c0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new contentsListHandler_h7tsgb_b2a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_contents");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class contentsListHandler_h7tsgb_c0 extends RefNodeListHandler {
+  private static class contentsListHandler_h7tsgb_b2a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public contentsListHandler_h7tsgb_c0(SNode ownerNode, EditorContext context) {
+    public contentsListHandler_h7tsgb_b2a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -149,7 +164,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return LINKS.contents$6guO;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.DeclarationsAndReferences$YA;
+      return CONCEPTS.Statement$YA;
     }
     public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
       return nodeFactory(prevNode, nextNode, index);
@@ -165,7 +180,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(contentsListHandler_h7tsgb_c0.this.getNode(), LINKS.contents$6guO));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(contentsListHandler_h7tsgb_b2a.this.getNode(), LINKS.contents$6guO));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -224,7 +239,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SInterfaceConcept DeclarationsAndReferences$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.DeclarationsAndReferences");
+    /*package*/ static final SInterfaceConcept Statement$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.Statement");
   }
 
   private static final class LINKS {

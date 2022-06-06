@@ -87,7 +87,7 @@
       </node>
       <node concept="A3Dl8" id="6on7nvqLG_H" role="3clF45">
         <node concept="3Tqbb2" id="6on7nvqLG_I" role="A3Ik2">
-          <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="DeclarationsAndReferences" />
+          <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
         </node>
       </node>
     </node>
