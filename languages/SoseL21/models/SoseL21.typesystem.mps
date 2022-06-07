@@ -876,6 +876,32 @@
         </node>
       </node>
     </node>
+    <node concept="3ciAk0" id="4e1n4jKIBUp" role="3he0YX">
+      <node concept="2pJPEk" id="4e1n4jKIBWm" role="3ciSkW">
+        <node concept="2pJPED" id="4e1n4jKIBWo" role="2pJPEn">
+          <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+        </node>
+      </node>
+      <node concept="2pJPEk" id="4e1n4jKIBX1" role="3ciSnv">
+        <node concept="2pJPED" id="4e1n4jKIBX3" role="2pJPEn">
+          <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+        </node>
+      </node>
+      <node concept="3gn64h" id="4e1n4jKIBUC" role="32tDTA">
+        <ref role="3gnhBz" to="kz24:4e1n4jKI$5S" resolve="AssignmentExpression" />
+      </node>
+      <node concept="3ciZUL" id="4e1n4jKIBUH" role="32tDT$">
+        <node concept="3clFbS" id="4e1n4jKIBUM" role="2VODD2">
+          <node concept="3cpWs6" id="4e1n4jKIBXG" role="3cqZAp">
+            <node concept="2pJPEk" id="4e1n4jKIC0a" role="3cqZAk">
+              <node concept="2pJPED" id="4e1n4jKIC0c" role="2pJPEn">
+                <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1YbPZF" id="2tELiO01bmg">
     <property role="TrG5h" value="typeof_IntDeclaration" />
@@ -999,6 +1025,36 @@
     <node concept="1YaCAy" id="6on7nvqLafB" role="1YuTPh">
       <property role="TrG5h" value="variableReference" />
       <ref role="1YaFvo" to="kz24:2tELiO03x6M" resolve="VariableReference" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="4e1n4jKILJQ">
+    <property role="TrG5h" value="typeof_WhileLoop" />
+    <node concept="3clFbS" id="4e1n4jKILJR" role="18ibNy">
+      <node concept="1Z5TYs" id="4e1n4jKIUtV" role="3cqZAp">
+        <node concept="mw_s8" id="4e1n4jKIUuw" role="1ZfhKB">
+          <node concept="2pJPEk" id="4e1n4jKIUus" role="mwGJk">
+            <node concept="2pJPED" id="4e1n4jKIUuu" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="4e1n4jKIUtY" role="1ZfhK$">
+          <node concept="1Z2H0r" id="4e1n4jKITwj" role="mwGJk">
+            <node concept="2OqwBi" id="4e1n4jKITHX" role="1Z2MuG">
+              <node concept="1YBJjd" id="4e1n4jKITys" role="2Oq$k0">
+                <ref role="1YBMHb" node="4e1n4jKILJT" resolve="whileLoop" />
+              </node>
+              <node concept="3TrEf2" id="4e1n4jKIUlW" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:4e1n4jKBQFb" resolve="condition" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4e1n4jKILJT" role="1YuTPh">
+      <property role="TrG5h" value="whileLoop" />
+      <ref role="1YaFvo" to="kz24:4e1n4jKBQF5" resolve="WhileLoop" />
     </node>
   </node>
 </model>

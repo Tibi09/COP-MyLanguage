@@ -14,6 +14,7 @@
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
     <import index="6xgk" ref="r:6e9ad488-5df2-49e4-8c01-8a7f3812adf7(jetbrains.mps.lang.scopes.runtime)" />
+    <import index="tp2v" ref="r:00000000-0000-4000-0000-011c8959032b(jetbrains.mps.baseLanguage.collections.typesystem)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -582,10 +583,10 @@
       <ref role="13i0hy" node="6on7nvqLDw8" resolve="getStatements" />
       <node concept="3Tm1VV" id="6on7nvqOQn6" role="1B3o_S" />
       <node concept="3clFbS" id="6on7nvqOQna" role="3clF47">
-        <node concept="3clFbF" id="6on7nvqOQnr" role="3cqZAp">
-          <node concept="2OqwBi" id="6on7nvqOQ$f" role="3clFbG">
-            <node concept="13iPFW" id="6on7nvqOQnq" role="2Oq$k0" />
-            <node concept="3Tsc0h" id="6on7nvqOQOo" role="2OqNvi">
+        <node concept="3clFbF" id="4e1n4jKBFeJ" role="3cqZAp">
+          <node concept="2OqwBi" id="4e1n4jKBFsz" role="3clFbG">
+            <node concept="13iPFW" id="4e1n4jKBFeI" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="4e1n4jKBN$y" role="2OqNvi">
               <ref role="3TtcxE" to="kz24:6on7nvqMcG2" resolve="then" />
             </node>
           </node>
@@ -593,6 +594,58 @@
       </node>
       <node concept="A3Dl8" id="6on7nvqOQnb" role="3clF45">
         <node concept="3Tqbb2" id="6on7nvqOQnc" role="A3Ik2">
+          <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="4e1n4jKBQFg">
+    <ref role="13h7C2" to="kz24:4e1n4jKBQF5" resolve="WhileLoop" />
+    <node concept="13hLZK" id="4e1n4jKBQFh" role="13h7CW">
+      <node concept="3clFbS" id="4e1n4jKBQFi" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="4e1n4jKBQFr" role="13h7CS">
+      <property role="TrG5h" value="getStatements" />
+      <ref role="13i0hy" node="6on7nvqLDw8" resolve="getStatements" />
+      <node concept="3Tm1VV" id="4e1n4jKBQFs" role="1B3o_S" />
+      <node concept="3clFbS" id="4e1n4jKBQFw" role="3clF47">
+        <node concept="3clFbF" id="4e1n4jKBQFL" role="3cqZAp">
+          <node concept="2OqwBi" id="4e1n4jKBQT_" role="3clFbG">
+            <node concept="13iPFW" id="4e1n4jKBQFK" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="4e1n4jKBRbN" role="2OqNvi">
+              <ref role="3TtcxE" to="kz24:4e1n4jKBQFd" resolve="then" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="A3Dl8" id="4e1n4jKBQFx" role="3clF45">
+        <node concept="3Tqbb2" id="4e1n4jKBQFy" role="A3Ik2">
+          <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="4e1n4jKGkpA">
+    <ref role="13h7C2" to="kz24:4e1n4jKGkpa" resolve="ForLoop" />
+    <node concept="13hLZK" id="4e1n4jKGkpB" role="13h7CW">
+      <node concept="3clFbS" id="4e1n4jKGkpC" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="4e1n4jKGkpL" role="13h7CS">
+      <property role="TrG5h" value="getStatements" />
+      <ref role="13i0hy" node="6on7nvqLDw8" resolve="getStatements" />
+      <node concept="3Tm1VV" id="4e1n4jKGkpM" role="1B3o_S" />
+      <node concept="3clFbS" id="4e1n4jKGkpQ" role="3clF47">
+        <node concept="3clFbF" id="4e1n4jKGkq7" role="3cqZAp">
+          <node concept="2OqwBi" id="4e1n4jKGkBV" role="3clFbG">
+            <node concept="13iPFW" id="4e1n4jKGkq6" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="4e1n4jKGkU9" role="2OqNvi">
+              <ref role="3TtcxE" to="kz24:4e1n4jKGkpx" resolve="then" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="A3Dl8" id="4e1n4jKGkpR" role="3clF45">
+        <node concept="3Tqbb2" id="4e1n4jKGkpS" role="A3Ik2">
           <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
         </node>
       </node>

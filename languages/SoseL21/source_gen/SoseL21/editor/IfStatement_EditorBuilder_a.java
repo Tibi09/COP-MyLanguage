@@ -434,7 +434,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.Statement$YA;
     }
+    public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
+      return nodeFactory(prevNode, nextNode, index);
+    }
 
+    public SNode nodeFactory(SNode prevNode, SNode nextNode, int index) {
+      return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee087e53L, "SoseL21.structure.EmptyStatement"));
+    }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
