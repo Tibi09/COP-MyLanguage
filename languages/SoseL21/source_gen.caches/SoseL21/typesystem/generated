@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="bxnvpkg52545yykft754lnpiypftvs1">
-  <files names="TypesystemDescriptor.java:check_Workspace_NonTypesystemRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_BooleanDeclaration_InferenceRule.java:typeof_BooleanLiteral_InferenceRule.java:typeof_EqialsExpression_InferenceRule.java:typeof_IntDeclaration_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_VariableReference_InferenceRule.java:typeof_WhileLoop_InferenceRule.java" />
+<product version="3" modelHash="c1233gyk2k1we1xfln1lolofzvatjaf">
+  <files names="TypesystemDescriptor.java:check_Workspace_NonTypesystemRule.java:typeof_BinaryExpression_InferenceRule.java:typeof_BooleanDeclaration_InferenceRule.java:typeof_BooleanLiteral_InferenceRule.java:typeof_EqialsExpression_InferenceRule.java:typeof_Function_InferenceRule.java:typeof_IntDeclaration_InferenceRule.java:typeof_MyBooleanType_InferenceRule.java:typeof_MyIntegerType_InferenceRule.java:typeof_MyVoidType_InferenceRule.java:typeof_NumberLiteral_InferenceRule.java:typeof_SpecialEmptyStatementForReturnExpression_InferenceRule.java:typeof_VariableReference_InferenceRule.java:typeof_WhileLoop_InferenceRule.java" />
 </product>
 

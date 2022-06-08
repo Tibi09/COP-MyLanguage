@@ -22,6 +22,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Expression;
   private ConceptPresentation props_ExpressionStatement;
   private ConceptPresentation props_ForLoop;
+  private ConceptPresentation props_Function;
   private ConceptPresentation props_GreaterEqualsExpression;
   private ConceptPresentation props_GreaterThanExpression;
   private ConceptPresentation props_IfStatement;
@@ -30,10 +31,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_LowerThanExpression;
   private ConceptPresentation props_MinusExpression;
   private ConceptPresentation props_MulExpression;
+  private ConceptPresentation props_MyBooleanType;
+  private ConceptPresentation props_MyIntegerType;
+  private ConceptPresentation props_MyType;
+  private ConceptPresentation props_MyVoidType;
   private ConceptPresentation props_NotEqualsExpression;
   private ConceptPresentation props_NumberLiteral;
   private ConceptPresentation props_PlusExpression;
   private ConceptPresentation props_Reference;
+  private ConceptPresentation props_SpecialEmptyStatementForReturnExpression;
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_StatementContainer;
   private ConceptPresentation props_VariableReference;
@@ -132,6 +138,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ForLoop = cpb.create();
         }
         return props_ForLoop;
+      case LanguageConceptSwitch.Function:
+        if (props_Function == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Function = cpb.create();
+        }
+        return props_Function;
       case LanguageConceptSwitch.GreaterEqualsExpression:
         if (props_GreaterEqualsExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -188,6 +201,33 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MulExpression = cpb.create();
         }
         return props_MulExpression;
+      case LanguageConceptSwitch.MyBooleanType:
+        if (props_MyBooleanType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("boolean");
+          props_MyBooleanType = cpb.create();
+        }
+        return props_MyBooleanType;
+      case LanguageConceptSwitch.MyIntegerType:
+        if (props_MyIntegerType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("int");
+          props_MyIntegerType = cpb.create();
+        }
+        return props_MyIntegerType;
+      case LanguageConceptSwitch.MyType:
+        if (props_MyType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_MyType = cpb.create();
+        }
+        return props_MyType;
+      case LanguageConceptSwitch.MyVoidType:
+        if (props_MyVoidType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("void");
+          props_MyVoidType = cpb.create();
+        }
+        return props_MyVoidType;
       case LanguageConceptSwitch.NotEqualsExpression:
         if (props_NotEqualsExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -216,6 +256,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Reference = cpb.create();
         }
         return props_Reference;
+      case LanguageConceptSwitch.SpecialEmptyStatementForReturnExpression:
+        if (props_SpecialEmptyStatementForReturnExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("empty");
+          props_SpecialEmptyStatementForReturnExpression = cpb.create();
+        }
+        return props_SpecialEmptyStatementForReturnExpression;
       case LanguageConceptSwitch.Statement:
         if (props_Statement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

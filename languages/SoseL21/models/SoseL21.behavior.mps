@@ -157,11 +157,15 @@
       <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">
         <child id="1204796294226" name="closure" index="23t8la" />
       </concept>
+      <concept id="1176906603202" name="jetbrains.mps.baseLanguage.collections.structure.BinaryOperation" flags="nn" index="56pJg">
+        <child id="1176906787974" name="rightExpression" index="576Qk" />
+      </concept>
       <concept id="1151689724996" name="jetbrains.mps.baseLanguage.collections.structure.SequenceType" flags="in" index="A3Dl8">
         <child id="1151689745422" name="elementType" index="A3Ik2" />
       </concept>
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
+      <concept id="1180964022718" name="jetbrains.mps.baseLanguage.collections.structure.ConcatOperation" flags="nn" index="3QWeyG" />
     </language>
   </registry>
   <node concept="13h7C7" id="bkc1BI3PPe">
@@ -646,6 +650,42 @@
       </node>
       <node concept="A3Dl8" id="4e1n4jKGkpR" role="3clF45">
         <node concept="3Tqbb2" id="4e1n4jKGkpS" role="A3Ik2">
+          <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="3nvff$qPsI1">
+    <ref role="13h7C2" to="kz24:3nvff$qMPBp" resolve="Function" />
+    <node concept="13hLZK" id="3nvff$qPsI2" role="13h7CW">
+      <node concept="3clFbS" id="3nvff$qPsI3" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="3nvff$qPsIc" role="13h7CS">
+      <property role="TrG5h" value="getStatements" />
+      <ref role="13i0hy" node="6on7nvqLDw8" resolve="getStatements" />
+      <node concept="3Tm1VV" id="3nvff$qPsId" role="1B3o_S" />
+      <node concept="3clFbS" id="3nvff$qPsIh" role="3clF47">
+        <node concept="3clFbF" id="3nvff$qZpLw" role="3cqZAp">
+          <node concept="2OqwBi" id="3nvff$qZrFX" role="3clFbG">
+            <node concept="2OqwBi" id="3nvff$qZpYT" role="2Oq$k0">
+              <node concept="13iPFW" id="3nvff$qZpLv" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="3nvff$qZqhq" role="2OqNvi">
+                <ref role="3TtcxE" to="kz24:3nvff$qMPBx" resolve="body" />
+              </node>
+            </node>
+            <node concept="3QWeyG" id="3nvff$qZv9E" role="2OqNvi">
+              <node concept="2OqwBi" id="3nvff$qZvsp" role="576Qk">
+                <node concept="13iPFW" id="3nvff$qZved" role="2Oq$k0" />
+                <node concept="3Tsc0h" id="3nvff$qZw3c" role="2OqNvi">
+                  <ref role="3TtcxE" to="kz24:3nvff$qMPBs" resolve="parameters" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="A3Dl8" id="3nvff$qPsIi" role="3clF45">
+        <node concept="3Tqbb2" id="3nvff$qPsIj" role="A3Ik2">
           <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
         </node>
       </node>

@@ -462,6 +462,22 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }).toListSequence();
         }
       }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "SpecialEmptyStatementForReturnExpression", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "3881888444413540375")));
+          try {
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
+        }
+      }.query()));
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -793,6 +809,29 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
               _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "BooleanLiteral", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "2840299312077969903")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "SpecialEmptyStatementForReturnExpression", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "3881888444413540375")));
               try {
               } finally {
                 _context.getEditorMenuTrace().popTraceInfo();

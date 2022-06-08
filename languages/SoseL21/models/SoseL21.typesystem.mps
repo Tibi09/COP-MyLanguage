@@ -1057,5 +1057,143 @@
       <ref role="1YaFvo" to="kz24:4e1n4jKBQF5" resolve="WhileLoop" />
     </node>
   </node>
+  <node concept="1YbPZF" id="3nvff$qUkBp">
+    <property role="TrG5h" value="typeof_Function" />
+    <node concept="3clFbS" id="3nvff$qUkBq" role="18ibNy">
+      <node concept="1Z5TYs" id="3nvff$qXqam" role="3cqZAp">
+        <node concept="mw_s8" id="3nvff$qXqaI" role="1ZfhKB">
+          <node concept="1Z2H0r" id="3nvff$qXqaE" role="mwGJk">
+            <node concept="2OqwBi" id="3nvff$qXqmW" role="1Z2MuG">
+              <node concept="1YBJjd" id="3nvff$qXqaZ" role="2Oq$k0">
+                <ref role="1YBMHb" node="3nvff$qUkBs" resolve="function" />
+              </node>
+              <node concept="3TrEf2" id="3nvff$qXr1Q" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:3nvff$qMPBu" resolve="returnType" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3nvff$qXqap" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3nvff$qXpdU" role="mwGJk">
+            <node concept="2OqwBi" id="3nvff$qXprI" role="1Z2MuG">
+              <node concept="1YBJjd" id="3nvff$qXpfO" role="2Oq$k0">
+                <ref role="1YBMHb" node="3nvff$qUkBs" resolve="function" />
+              </node>
+              <node concept="3TrEf2" id="3nvff$qXq1m" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:3nvff$qMPB_" resolve="returnExp" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3nvff$qUkBs" role="1YuTPh">
+      <property role="TrG5h" value="function" />
+      <ref role="1YaFvo" to="kz24:3nvff$qMPBp" resolve="Function" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3nvff$qX11u">
+    <property role="TrG5h" value="typeof_MyBooleanType" />
+    <property role="3GE5qa" value="types" />
+    <node concept="3clFbS" id="3nvff$qX11v" role="18ibNy">
+      <node concept="1Z5TYs" id="3nvff$qX1lL" role="3cqZAp">
+        <node concept="mw_s8" id="3nvff$qX1m5" role="1ZfhKB">
+          <node concept="2pJPEk" id="3nvff$qX1m1" role="mwGJk">
+            <node concept="2pJPED" id="3nvff$qX1m3" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3nvff$qX1lO" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3nvff$qX11_" role="mwGJk">
+            <node concept="1YBJjd" id="3nvff$qX159" role="1Z2MuG">
+              <ref role="1YBMHb" node="3nvff$qX11x" resolve="myBooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3nvff$qX11x" role="1YuTPh">
+      <property role="TrG5h" value="myBooleanType" />
+      <ref role="1YaFvo" to="kz24:3nvff$qUsD7" resolve="MyBooleanType" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3nvff$qX1np">
+    <property role="TrG5h" value="typeof_MyIntegerType" />
+    <property role="3GE5qa" value="types" />
+    <node concept="3clFbS" id="3nvff$qX1nq" role="18ibNy">
+      <node concept="1Z5TYs" id="3nvff$qX1tY" role="3cqZAp">
+        <node concept="mw_s8" id="3nvff$qX1ui" role="1ZfhKB">
+          <node concept="2pJPEk" id="3nvff$qX1ue" role="mwGJk">
+            <node concept="2pJPED" id="3nvff$qX1ug" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:f_0OyhT" resolve="IntegerType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3nvff$qX1u1" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3nvff$qX1nw" role="mwGJk">
+            <node concept="1YBJjd" id="3nvff$qX1pq" role="1Z2MuG">
+              <ref role="1YBMHb" node="3nvff$qX1ns" resolve="myIntegerType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3nvff$qX1ns" role="1YuTPh">
+      <property role="TrG5h" value="myIntegerType" />
+      <ref role="1YaFvo" to="kz24:3nvff$qUsD6" resolve="MyIntegerType" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3nvff$qX1vA">
+    <property role="TrG5h" value="typeof_MyVoidType" />
+    <property role="3GE5qa" value="types" />
+    <node concept="3clFbS" id="3nvff$qX1vB" role="18ibNy">
+      <node concept="1Z5TYs" id="3nvff$qX1BN" role="3cqZAp">
+        <node concept="mw_s8" id="3nvff$qX1C7" role="1ZfhKB">
+          <node concept="2pJPEk" id="3nvff$qX1C3" role="mwGJk">
+            <node concept="2pJPED" id="3nvff$qX1C5" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:fzcqZ_H" resolve="VoidType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3nvff$qX1BQ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3nvff$qX1vH" role="mwGJk">
+            <node concept="1YBJjd" id="3nvff$qX1xB" role="1Z2MuG">
+              <ref role="1YBMHb" node="3nvff$qX1vD" resolve="myVoidType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3nvff$qX1vD" role="1YuTPh">
+      <property role="TrG5h" value="myVoidType" />
+      <ref role="1YaFvo" to="kz24:3nvff$qUsD8" resolve="MyVoidType" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3nvff$qYlxp">
+    <property role="TrG5h" value="typeof_SpecialEmptyStatementForReturnExpression" />
+    <node concept="3clFbS" id="3nvff$qYlxq" role="18ibNy">
+      <node concept="1Z5TYs" id="3nvff$qYlFy" role="3cqZAp">
+        <node concept="mw_s8" id="3nvff$qYlFQ" role="1ZfhKB">
+          <node concept="2pJPEk" id="3nvff$qYlFM" role="mwGJk">
+            <node concept="2pJPED" id="3nvff$qYlFO" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:fzcqZ_H" resolve="VoidType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3nvff$qYlF_" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3nvff$qYlxw" role="mwGJk">
+            <node concept="1YBJjd" id="3nvff$qYlzq" role="1Z2MuG">
+              <ref role="1YBMHb" node="3nvff$qYlxs" resolve="specialEmptyStatementForReturnExpression" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3nvff$qYlxs" role="1YuTPh">
+      <property role="TrG5h" value="specialEmptyStatementForReturnExpression" />
+      <ref role="1YaFvo" to="kz24:3nvff$qXBwa" resolve="SpecialEmptyStatementForReturnExpression" />
+    </node>
+  </node>
 </model>
 
