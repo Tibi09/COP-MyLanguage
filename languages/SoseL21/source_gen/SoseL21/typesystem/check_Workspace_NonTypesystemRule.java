@@ -14,15 +14,11 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
-import java.util.Set;
-import jetbrains.mps.internal.collections.runtime.SetSequence;
-import java.util.HashSet;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class check_Workspace_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
@@ -50,17 +46,6 @@ public class check_Workspace_NonTypesystemRule extends AbstractNonTypesystemRule
       }
     }
 
-    Iterable<SNode> mySeq1 = SNodeOperations.ofConcept(SLinkOperations.getChildren(workspace, LINKS.contents$6guO), CONCEPTS.Declarations$52);
-    Set<String> names = SetSequence.fromSet(new HashSet<String>());
-    for (SNode dec : Sequence.fromIterable(mySeq1)) {
-      if (SetSequence.fromSet(names).contains(SPropertyOperations.getString(dec, PROPS.name$MnvL))) {
-        {
-          final MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(workspace, "Duplicate name: " + SPropertyOperations.getString(dec, PROPS.name$MnvL), "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "6205399986108092413", null, errorTarget);
-        }
-      }
-      SetSequence.fromSet(names).addElement(SPropertyOperations.getString(dec, PROPS.name$MnvL));
-    }
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.Workspace$b9;
@@ -79,7 +64,6 @@ public class check_Workspace_NonTypesystemRule extends AbstractNonTypesystemRule
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Reference$_4 = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad30bL, "SoseL21.structure.Reference");
-    /*package*/ static final SInterfaceConcept Declarations$52 = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad323L, "SoseL21.structure.Declarations");
     /*package*/ static final SConcept Workspace$b9 = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8002L, "SoseL21.structure.Workspace");
   }
 

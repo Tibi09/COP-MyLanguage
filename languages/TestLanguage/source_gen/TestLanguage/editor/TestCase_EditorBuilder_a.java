@@ -117,8 +117,8 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("refNodeList_content");
     Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
@@ -140,7 +140,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return LINKS.content$iiBZ;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.DeclarationsAndReferences$YA;
+      return CONCEPTS.Statement$YA;
     }
     public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
       return nodeFactory(prevNode, nextNode, index);
@@ -209,7 +209,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SInterfaceConcept DeclarationsAndReferences$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.DeclarationsAndReferences");
+    /*package*/ static final SInterfaceConcept Statement$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.Statement");
   }
 
   private static final class LINKS {

@@ -7,6 +7,7 @@
       <modulePath path="$PROJECT_DIR$/languages/SoseL21/sandbox/SoseL21.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/TestLanguage/TestLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/SoseL21.sandbox.interpreter/SoseL21.sandbox.interpreter.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/SoseL21.test/SoseL21.test.msd" folder="" />
     </projectModules>
   </component>
 </project>
