@@ -1029,6 +1029,7 @@
   </node>
   <node concept="1YbPZF" id="4e1n4jKILJQ">
     <property role="TrG5h" value="typeof_WhileLoop" />
+    <property role="3GE5qa" value="control-statements" />
     <node concept="3clFbS" id="4e1n4jKILJR" role="18ibNy">
       <node concept="1Z5TYs" id="4e1n4jKIUtV" role="3cqZAp">
         <node concept="mw_s8" id="4e1n4jKIUuw" role="1ZfhKB">
@@ -1193,6 +1194,37 @@
     <node concept="1YaCAy" id="3nvff$qYlxs" role="1YuTPh">
       <property role="TrG5h" value="specialEmptyStatementForReturnExpression" />
       <ref role="1YaFvo" to="kz24:3nvff$qXBwa" resolve="SpecialEmptyStatementForReturnExpression" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="6QdxS8hsdO$">
+    <property role="TrG5h" value="typeof_ForLoop" />
+    <property role="3GE5qa" value="control-statements" />
+    <node concept="3clFbS" id="6QdxS8hsdO_" role="18ibNy">
+      <node concept="1Z5TYs" id="6QdxS8hseTo" role="3cqZAp">
+        <node concept="mw_s8" id="6QdxS8hseTK" role="1ZfhKB">
+          <node concept="2pJPEk" id="6QdxS8hseTG" role="mwGJk">
+            <node concept="2pJPED" id="6QdxS8hseTI" role="2pJPEn">
+              <ref role="2pJxaS" to="tpee:f_0P_4Y" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="6QdxS8hseTr" role="1ZfhK$">
+          <node concept="1Z2H0r" id="6QdxS8hsdOF" role="mwGJk">
+            <node concept="2OqwBi" id="6QdxS8hse3L" role="1Z2MuG">
+              <node concept="1YBJjd" id="6QdxS8hsdQ_" role="2Oq$k0">
+                <ref role="1YBMHb" node="6QdxS8hsdOB" resolve="forLoop" />
+              </node>
+              <node concept="3TrEf2" id="6QdxS8hseEh" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:4e1n4jKGkpq" resolve="condition" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="6QdxS8hsdOB" role="1YuTPh">
+      <property role="TrG5h" value="forLoop" />
+      <ref role="1YaFvo" to="kz24:4e1n4jKGkpa" resolve="ForLoop" />
     </node>
   </node>
 </model>

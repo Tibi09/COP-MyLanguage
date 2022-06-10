@@ -34,7 +34,7 @@ public class BooleanDeclaration_Constraints extends BaseConstraintsDescriptor {
       return result;
     }
     private static boolean staticValidateProperty(SNode node, String propertyValue) {
-      return propertyValue.matches("[a-zA-z][a-zA-Z0-9]*");
+      return propertyValue.matches("[a-zA-Z][a-zA-Z0-9]*") && !(propertyValue.matches("true")) && !(propertyValue.matches("false")) && !(propertyValue.matches("for")) && !(propertyValue.matches("while")) && !(propertyValue.matches("if")) && !(propertyValue.matches("int")) && !(propertyValue.matches("boolean")) && !(propertyValue.matches("void")) && !(propertyValue.matches("function")) && !(propertyValue.matches("return"));
     }
   }
   @Override

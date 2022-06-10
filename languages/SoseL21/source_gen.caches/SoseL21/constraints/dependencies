@@ -37,6 +37,7 @@
   </dependency>
   <dependency className="SoseL21.constraints.ConstraintsAspectDescriptor">
     <classNode dependClassName="SoseL21.constraints.BooleanDeclaration_Constraints" />
+    <classNode dependClassName="SoseL21.constraints.ElseStatement_Constraints" />
     <classNode dependClassName="SoseL21.constraints.IntDeclaration_Constraints" />
     <classNode dependClassName="SoseL21.constraints.Reference_Constraints" />
     <classNode dependClassName="SoseL21.constraints.VariableReference_Constraints" />
@@ -48,6 +49,11 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BaseConstraintsAspectDescriptor" />
+  </dependency>
+  <dependency className="SoseL21.constraints.ElseStatement_Constraints">
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
   <dependency className="SoseL21.constraints.IntDeclaration_Constraints">
     <classNode dependClassName="java.lang.Object" />
