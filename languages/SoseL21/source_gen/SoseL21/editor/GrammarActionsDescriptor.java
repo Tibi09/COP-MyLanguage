@@ -85,7 +85,29 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), IntDeclaration_Editor.class, _context.getEditorContext())) {
                 boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
                 if (applicable) {
-                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "static", _context, new DefaultFlagModelAccess(PROPS.static$ghBA)));
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "final", _context, new DefaultFlagModelAccess(PROPS.final$ghBA)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.BooleanDeclaration$9c;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), BooleanDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "final", _context, new DefaultFlagModelAccess(PROPS.final$SnoT)));
                 }
               }
             }
@@ -926,6 +948,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept IntDeclaration$bc = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, "SoseL21.structure.IntDeclaration");
+    /*package*/ static final SConcept BooleanDeclaration$9c = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, "SoseL21.structure.BooleanDeclaration");
     /*package*/ static final SConcept NumberLiteral$Pl = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, "SoseL21.structure.NumberLiteral");
     /*package*/ static final SConcept Expression$li = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL, "SoseL21.structure.Expression");
     /*package*/ static final SConcept BinaryExpression$pO = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L, "SoseL21.structure.BinaryExpression");
@@ -934,7 +957,8 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty static$ghBA = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x2d43019ee09b30fL, "static");
+    /*package*/ static final SProperty final$ghBA = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x2d43019ee09b30fL, "final");
+    /*package*/ static final SProperty final$SnoT = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x24bb4622de898526L, "final");
     /*package*/ static final SProperty value$sibJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, 0x2d43019ee0a41c2L, "value");
     /*package*/ static final SProperty value$D4vJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, 0x561e0268e531fa1bL, "value");
   }

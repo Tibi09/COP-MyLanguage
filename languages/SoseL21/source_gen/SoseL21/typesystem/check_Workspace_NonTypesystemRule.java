@@ -46,6 +46,33 @@ public class check_Workspace_NonTypesystemRule extends AbstractNonTypesystemRule
       }
     }
 
+
+    Iterable<SNode> ceva = SNodeOperations.ofConcept(SLinkOperations.getChildren(workspace, LINKS.contents$6guO), CONCEPTS.ExpressionStatement$jS);
+    for (SNode exp : Sequence.fromIterable(ceva)) {
+      Iterable<SNode> refs = SNodeOperations.ofConcept(SNodeOperations.getChildren(SLinkOperations.getTarget(exp, LINKS.expr$Jxtf)), CONCEPTS.VariableReference$jB);
+      for (SNode l : Sequence.fromIterable(refs)) {
+        String name = SPropertyOperations.getString(SLinkOperations.getTarget(l, LINKS.variable$G1kJ), PROPS.name$MnvL);
+        Iterable<SNode> mySeq1 = SNodeOperations.ofConcept(SLinkOperations.getChildren(workspace, LINKS.contents$6guO), CONCEPTS.IntDeclaration$bc);
+        for (SNode dec : Sequence.fromIterable(mySeq1)) {
+          if (SPropertyOperations.getString(dec, PROPS.name$MnvL) == name && SPropertyOperations.getBoolean(dec, PROPS.final$ghBA)) {
+            {
+              final MessageTarget errorTarget = new NodeMessageTarget();
+              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(l, "cannot assign a value to final variable '" + name + "'", "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2646786321587205864", null, errorTarget);
+            }
+          }
+        }
+        Iterable<SNode> mySeq2 = SNodeOperations.ofConcept(SLinkOperations.getChildren(workspace, LINKS.contents$6guO), CONCEPTS.BooleanDeclaration$9c);
+        for (SNode dec : Sequence.fromIterable(mySeq2)) {
+          if (SPropertyOperations.getString(dec, PROPS.name$MnvL) == name && SPropertyOperations.getBoolean(dec, PROPS.final$SnoT)) {
+            {
+              final MessageTarget errorTarget = new NodeMessageTarget();
+              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(l, "cannot assign a value to final variable '" + name + "'", "r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2646786321587351810", null, errorTarget);
+            }
+          }
+        }
+
+      }
+    }
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.Workspace$b9;
@@ -60,14 +87,22 @@ public class check_Workspace_NonTypesystemRule extends AbstractNonTypesystemRule
   private static final class LINKS {
     /*package*/ static final SContainmentLink contents$6guO = MetaAdapterFactory.getContainmentLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8002L, 0x59343f22639a8055L, "contents");
     /*package*/ static final SReferenceLink variableReference$j9Qc = MetaAdapterFactory.getReferenceLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad30bL, 0x59343f22639ad3fbL, "variableReference");
+    /*package*/ static final SContainmentLink expr$Jxtf = MetaAdapterFactory.getContainmentLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5321d9ecfadfa2d1L, 0x5321d9ecfadfa2d2L, "expr");
+    /*package*/ static final SReferenceLink variable$G1kJ = MetaAdapterFactory.getReferenceLink(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52d000e11b2L, 0x276ac52d000e11b3L, "variable");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Reference$_4 = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639ad30bL, "SoseL21.structure.Reference");
+    /*package*/ static final SConcept ExpressionStatement$jS = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5321d9ecfadfa2d1L, "SoseL21.structure.ExpressionStatement");
+    /*package*/ static final SConcept VariableReference$jB = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x276ac52d000e11b2L, "SoseL21.structure.VariableReference");
+    /*package*/ static final SConcept IntDeclaration$bc = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, "SoseL21.structure.IntDeclaration");
+    /*package*/ static final SConcept BooleanDeclaration$9c = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, "SoseL21.structure.BooleanDeclaration");
     /*package*/ static final SConcept Workspace$b9 = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8002L, "SoseL21.structure.Workspace");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty final$ghBA = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x2d43019ee09b30fL, "final");
+    /*package*/ static final SProperty final$SnoT = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x24bb4622de898526L, "final");
   }
 }
