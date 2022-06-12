@@ -13,6 +13,8 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAssertStatement = createDescriptorForAssertStatement();
+  /*package*/ final ConceptDescriptor myConceptExecuteSigleTestCase = createDescriptorForExecuteSigleTestCase();
+  /*package*/ final ConceptDescriptor myConceptExecuteTests = createDescriptorForExecuteTests();
   /*package*/ final ConceptDescriptor myConceptTestCase = createDescriptorForTestCase();
   /*package*/ final ConceptDescriptor myConceptTestSuite = createDescriptorForTestSuite();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -30,7 +32,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAssertStatement, myConceptTestCase, myConceptTestSuite);
+    return Arrays.asList(myConceptAssertStatement, myConceptExecuteSigleTestCase, myConceptExecuteTests, myConceptTestCase, myConceptTestSuite);
   }
 
   @Override
@@ -39,6 +41,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.AssertStatement:
         return myConceptAssertStatement;
+      case LanguageConceptSwitch.ExecuteSigleTestCase:
+        return myConceptExecuteSigleTestCase;
+      case LanguageConceptSwitch.ExecuteTests:
+        return myConceptExecuteTests;
       case LanguageConceptSwitch.TestCase:
         return myConceptTestCase;
       case LanguageConceptSwitch.TestSuite:
@@ -61,6 +67,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("expr", 0x276ac52d000d8a7fL).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL).optional(false).ordered(true).multiple(false).origin("2840299312075606655").done();
     b.alias("assert");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExecuteSigleTestCase() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TestLanguage", "ExecuteSigleTestCase", 0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50c0b92L);
+    b.class_(false, false, false);
+    b.parent(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L);
+    b.origin("r:c7db0690-b9e4-42d1-adcc-fed992797934(TestLanguage.structure)/790760429739314066");
+    b.version(2);
+    b.associate("test", 0xaf9586bd50c0b95L).target(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d0102L).optional(false).origin("790760429739314069").done();
+    b.associate("suite", 0xaf9586bd50c6275L).target(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d00ffL).optional(false).origin("790760429739336309").done();
+    b.alias("execute test");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExecuteTests() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TestLanguage", "ExecuteTests", 0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50b495eL);
+    b.class_(false, false, false);
+    b.parent(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L);
+    b.origin("r:c7db0690-b9e4-42d1-adcc-fed992797934(TestLanguage.structure)/790760429739264350");
+    b.version(2);
+    b.associate("testSuite", 0xaf9586bd50b4961L).target(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d00ffL).optional(false).origin("790760429739264353").done();
+    b.alias("execute tests");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTestCase() {

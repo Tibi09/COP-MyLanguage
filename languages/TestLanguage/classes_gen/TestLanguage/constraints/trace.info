@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,29,0" name="TestLanguage.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,31,0" name="TestLanguage.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:4b14032d-7f57-4098-abf6-0ebeb345a0a7(TestLanguage.constraints)/2840299312075632991">
@@ -55,6 +55,47 @@
       <unit id="2840299312075632991" at="44,0,48,0" name="TestLanguage.constraints.AssertStatement_Constraints$CONCEPTS" />
       <unit id="2840299312075632991" at="26,15,37,5" name="TestLanguage.constraints.AssertStatement_Constraints$1" />
       <unit id="2840299312075632991" at="19,0,49,0" name="TestLanguage.constraints.AssertStatement_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:4b14032d-7f57-4098-abf6-0ebeb345a0a7(TestLanguage.constraints)/790760429739336370">
+    <file name="ExecuteSigleTestCase_Constraints.java">
+      <node id="790760429739336370" at="25,45,26,44" concept="9" />
+      <node id="790760429739336371" at="37,63,38,126" concept="5" />
+      <node id="790760429739337688" at="41,80,42,167" concept="5" />
+      <node id="790760429739336370" at="46,6,47,131" concept="4" />
+      <node id="790760429739336371" at="47,131,48,42" concept="1" />
+      <node id="790760429739336370" at="48,42,49,22" concept="5" />
+      <node id="790760429739336370" at="53,0,54,0" concept="7" trace="ExecuteSigleTestCase$UZ" />
+      <node id="790760429739336370" at="57,0,58,0" concept="7" trace="test$cIzv" />
+      <node id="790760429739336370" at="58,0,59,0" concept="7" trace="suite$$9NC" />
+      <node id="790760429739336370" at="59,0,60,0" concept="7" trace="tests$f5jR" />
+      <node id="790760429739336370" at="25,0,28,0" concept="0" trace="ExecuteSigleTestCase_Constraints#()V" />
+      <node id="790760429739336371" at="36,0,40,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="790760429739336371" at="40,0,44,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="790760429739336371" at="34,56,44,10" concept="5" />
+      <node id="790760429739336371" at="32,0,46,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="790760429739336371" at="30,90,46,6" concept="4" />
+      <node id="790760429739336370" at="29,0,51,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="790760429739336370" at="25,45,26,44" />
+      <scope id="790760429739336371" at="37,63,38,126" />
+      <scope id="790760429739336371" at="41,80,42,167" />
+      <scope id="790760429739336370" at="25,0,28,0" />
+      <scope id="790760429739336371" at="36,0,40,0" />
+      <scope id="790760429739336371" at="40,0,44,0">
+        <var name="_context" id="790760429739336371" />
+      </scope>
+      <scope id="790760429739336371" at="34,56,44,10" />
+      <scope id="790760429739336371" at="32,0,46,0" />
+      <scope id="790760429739336370" at="30,90,49,22">
+        <var name="d0" id="790760429739336371" />
+        <var name="references" id="790760429739336370" />
+      </scope>
+      <scope id="790760429739336370" at="29,0,51,0" />
+      <unit id="790760429739336370" at="52,0,55,0" name="TestLanguage.constraints.ExecuteSigleTestCase_Constraints$CONCEPTS" />
+      <unit id="790760429739336370" at="56,0,61,0" name="TestLanguage.constraints.ExecuteSigleTestCase_Constraints$LINKS" />
+      <unit id="790760429739336371" at="35,19,44,9" name="TestLanguage.constraints.ExecuteSigleTestCase_Constraints$1$1" />
+      <unit id="790760429739336371" at="31,48,46,5" name="TestLanguage.constraints.ExecuteSigleTestCase_Constraints$1" />
+      <unit id="790760429739336370" at="24,0,62,0" name="TestLanguage.constraints.ExecuteSigleTestCase_Constraints" />
     </file>
   </root>
 </debug-info>

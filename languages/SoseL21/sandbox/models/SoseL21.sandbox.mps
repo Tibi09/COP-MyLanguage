@@ -15,6 +15,13 @@
       <concept id="2840299312075571455" name="TestLanguage.structure.TestSuite" flags="ng" index="BpWni">
         <child id="2840299312075571461" name="tests" index="BpWgC" />
       </concept>
+      <concept id="790760429739264350" name="TestLanguage.structure.ExecuteTests" flags="ng" index="3vWx4P">
+        <reference id="790760429739264353" name="testSuite" index="3vWx4a" />
+      </concept>
+      <concept id="790760429739314066" name="TestLanguage.structure.ExecuteSigleTestCase" flags="ng" index="3vXlfT">
+        <reference id="790760429739336309" name="suite" index="3vXjCu" />
+        <reference id="790760429739314069" name="test" index="3vXlfY" />
+      </concept>
     </language>
     <language id="675036cf-295d-4c04-a418-8a54769c9d5c" name="SoseL21">
       <concept id="2840299312075641266" name="SoseL21.structure.VariableReference" flags="ng" index="Bpdiv">
@@ -91,6 +98,7 @@
     <node concept="3GR4Ta" id="4e1n4jKJ_Ie" role="UFFXR" />
     <node concept="UFFXP" id="2tELiNZZoCv" role="UFFXR">
       <property role="TrG5h" value="a" />
+      <property role="3GRocm" value="true" />
       <node concept="3GRB7o" id="2tELiNZZoC_" role="3GRB7a">
         <property role="3GRB7r" value="5" />
       </node>
@@ -366,6 +374,14 @@
         <property role="TrG5h" value="param2" />
       </node>
     </node>
+    <node concept="3GR4Ta" id="FTm6Jl30Af" role="UFFXR" />
+    <node concept="3vWx4P" id="FTm6Jl30Fc" role="UFFXR">
+      <ref role="3vWx4a" node="2tELiO03i9t" resolve="myTests" />
+    </node>
+    <node concept="3vXlfT" id="FTm6Jl362t" role="UFFXR">
+      <ref role="3vXjCu" node="2tELiO03i9t" resolve="myTests" />
+      <ref role="3vXlfY" node="2tELiO03i9u" resolve="something" />
+    </node>
     <node concept="3GR4Ta" id="4e1n4jKJ_Jl" role="UFFXR" />
   </node>
   <node concept="BpWni" id="2tELiO03i9t">
@@ -411,6 +427,18 @@
           </node>
         </node>
         <node concept="3GR4Ta" id="485qvoEKvjg" role="2WRXpP" />
+      </node>
+    </node>
+  </node>
+  <node concept="BpWni" id="FTm6Jl3690">
+    <property role="TrG5h" value="uuu" />
+    <node concept="BpWgJ" id="FTm6Jl3691" role="BpWgC">
+      <property role="TrG5h" value="ceva" />
+      <node concept="UFFXP" id="FTm6Jl369f" role="BpWhZ">
+        <property role="TrG5h" value="i" />
+        <node concept="3GRB7o" id="FTm6Jl369E" role="3GRB7a">
+          <property role="3GRB7r" value="1" />
+        </node>
       </node>
     </node>
   </node>

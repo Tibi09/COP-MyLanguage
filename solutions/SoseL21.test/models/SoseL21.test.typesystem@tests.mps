@@ -14,6 +14,9 @@
       <concept id="1215507671101" name="jetbrains.mps.lang.test.structure.NodeErrorCheckOperation" flags="ng" index="1TM$A">
         <child id="8489045168660938517" name="errorRef" index="3lydEf" />
       </concept>
+      <concept id="1215526290564" name="jetbrains.mps.lang.test.structure.NodeTypeCheckOperation" flags="ng" index="30Omv">
+        <child id="1215526393912" name="type" index="31d$z" />
+      </concept>
       <concept id="1215603922101" name="jetbrains.mps.lang.test.structure.NodeOperationsContainer" flags="ng" index="7CXmI">
         <child id="1215604436604" name="nodeOperations" index="7EUXB" />
       </concept>
@@ -34,6 +37,9 @@
       <concept id="1216989428737" name="jetbrains.mps.lang.test.structure.TestNode" flags="ng" index="1qefOq">
         <child id="1216989461394" name="nodeToCheck" index="1qenE9" />
       </concept>
+    </language>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
     </language>
     <language id="675036cf-295d-4c04-a418-8a54769c9d5c" name="SoseL21">
       <concept id="2840299312075641266" name="SoseL21.structure.VariableReference" flags="ng" index="Bpdiv">
@@ -151,6 +157,18 @@
                 <node concept="2PYRI3" id="485qvoEL6E9" role="3lydEf">
                   <ref role="39XzEq" to="fu1l:2tELiNZZtMb" />
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3GR4Ta" id="2iVhybu_Jo3" role="UFFXR" />
+        <node concept="UFFYx" id="2iVhybu_Jp$" role="UFFXR">
+          <property role="TrG5h" value="altceva" />
+          <node concept="Bpdiv" id="2iVhybu_Jrk" role="3GLwIp">
+            <ref role="Bpdiu" node="485qvoEL4rY" resolve="something" />
+            <node concept="7CXmI" id="2iVhybu_Jrx" role="lGtFl">
+              <node concept="30Omv" id="2iVhybu_Ode" role="7EUXB">
+                <node concept="10P_77" id="2iVhybu_OdX" role="31d$z" />
               </node>
             </node>
           </node>

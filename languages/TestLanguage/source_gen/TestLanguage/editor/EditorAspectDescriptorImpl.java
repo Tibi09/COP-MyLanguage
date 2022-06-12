@@ -20,8 +20,12 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 0:
         return Collections.<ConceptEditor>singletonList(new AssertStatement_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new TestCase_Editor());
+        return Collections.<ConceptEditor>singletonList(new ExecuteSigleTestCase_Editor());
       case 2:
+        return Collections.<ConceptEditor>singletonList(new ExecuteTests_Editor());
+      case 3:
+        return Collections.<ConceptEditor>singletonList(new TestCase_Editor());
+      case 4:
         return Collections.<ConceptEditor>singletonList(new TestSuite_Editor());
       default:
     }
@@ -30,5 +34,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d8a7cL), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d0102L), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d00ffL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d8a7cL), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50c0b92L), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50b495eL), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d0102L), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d00ffL)).seal();
 }

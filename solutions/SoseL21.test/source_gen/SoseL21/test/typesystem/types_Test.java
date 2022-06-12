@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import jetbrains.mps.lang.test.runtime.CheckExpectedMessageRunnable;
 import jetbrains.mps.errors.MessageStatus;
 import jetbrains.mps.smodel.SNodePointer;
+import jetbrains.mps.lang.test.runtime.CheckTypesAction;
 
 @MPSLaunch
 public class types_Test extends BaseTransformationTest {
@@ -50,6 +51,10 @@ public class types_Test extends BaseTransformationTest {
   @Test
   public void test_NodeOperationNotSupportedCheck4757325087387183752() throws Throwable {
     new TestBody(this).test_NodeOperationNotSupportedCheck4757325087387183752();
+  }
+  @Test
+  public void test_NodeTypeCheck2646786321587585870() throws Throwable {
+    new TestBody(this).test_NodeTypeCheck2646786321587585870();
   }
   @Test
   public void test_ErrorMessagesCheck4757325087387217676() throws Throwable {
@@ -86,6 +91,12 @@ public class types_Test extends BaseTransformationTest {
       SNode nodeToCheck = getRealNodeById("4757325087387174934");
       SNode operation = getRealNodeById("4757325087387183752");
       new CheckExpectedMessageRunnable.CheckExpectedRuleMessageRunnable(nodeToCheck, MessageStatus.ERROR, new SNodePointer("r:a3be9e7c-87f2-4626-a2fe-b4dfe2f3a25c(SoseL21.typesystem)", "2840299312074579083"), "", myProject.getRepository(), ((ProjectBase) myProject).getPlatform()).run();
+    }
+    public void test_NodeTypeCheck2646786321587585870() throws Exception {
+      SNode nodeToCheck = getRealNodeById("2646786321587566292");
+      SNode operation = getRealNodeById("2646786321587585870");
+      addNodeById("2646786321587585917");
+      new CheckTypesAction.CheckComputedType(nodeToCheck).checkTypeIs(getNodeById("2646786321587585917"));
     }
     public void test_ErrorMessagesCheck4757325087387217676() throws Exception {
       SNode nodeToCheck = getRealNodeById("4757325087387031957");

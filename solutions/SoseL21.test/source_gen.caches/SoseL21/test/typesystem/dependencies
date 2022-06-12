@@ -44,6 +44,7 @@
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.BaseTestBody" />
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.CheckErrorMessagesRunnable" />
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.CheckExpectedMessageRunnable" />
+    <classNode dependClassName="jetbrains.mps.lang.test.runtime.CheckTypesAction" />
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.RunWithCommand" />
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.TestParametersCache" />
     <classNode dependClassName="jetbrains.mps.lang.test.runtime.TransformationTest" />
