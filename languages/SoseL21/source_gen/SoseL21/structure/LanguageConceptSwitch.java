@@ -38,14 +38,15 @@ public final class LanguageConceptSwitch {
   public static final int MyVoidType = 26;
   public static final int NotEqualsExpression = 27;
   public static final int NumberLiteral = 28;
-  public static final int PlusExpression = 29;
-  public static final int Reference = 30;
-  public static final int SpecialEmptyStatementForReturnExpression = 31;
-  public static final int Statement = 32;
-  public static final int StatementContainer = 33;
-  public static final int VariableReference = 34;
-  public static final int WhileLoop = 35;
-  public static final int Workspace = 36;
+  public static final int ParameterDeclaration = 29;
+  public static final int PlusExpression = 30;
+  public static final int Reference = 31;
+  public static final int SpecialEmptyStatementForReturnExpression = 32;
+  public static final int Statement = 33;
+  public static final int StatementContainer = 34;
+  public static final int VariableReference = 35;
+  public static final int WhileLoop = 36;
+  public static final int Workspace = 37;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x675036cf295d4c04L, 0xa4188a54769c9d5cL);
@@ -78,6 +79,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x35df3cf91ae9ca48L, MyVoidType);
     builder.put(0x2d43019ee1231d8L, NotEqualsExpression);
     builder.put(0x2d43019ee0a41c1L, NumberLiteral);
+    builder.put(0x4514668c8feb0458L, ParameterDeclaration);
     builder.put(0x2d43019ee0d8120L, PlusExpression);
     builder.put(0x59343f22639ad30bL, Reference);
     builder.put(0x35df3cf91af6780aL, SpecialEmptyStatementForReturnExpression);

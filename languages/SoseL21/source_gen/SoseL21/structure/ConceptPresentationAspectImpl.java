@@ -38,6 +38,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_MyVoidType;
   private ConceptPresentation props_NotEqualsExpression;
   private ConceptPresentation props_NumberLiteral;
+  private ConceptPresentation props_ParameterDeclaration;
   private ConceptPresentation props_PlusExpression;
   private ConceptPresentation props_Reference;
   private ConceptPresentation props_SpecialEmptyStatementForReturnExpression;
@@ -250,6 +251,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_NumberLiteral = cpb.create();
         }
         return props_NumberLiteral;
+      case LanguageConceptSwitch.ParameterDeclaration:
+        if (props_ParameterDeclaration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ParameterDeclaration = cpb.create();
+        }
+        return props_ParameterDeclaration;
       case LanguageConceptSwitch.PlusExpression:
         if (props_PlusExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

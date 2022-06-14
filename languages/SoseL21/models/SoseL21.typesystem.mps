@@ -1703,5 +1703,35 @@
       <ref role="1YaFvo" to="kz24:5$OfM9zAC23" resolve="BooleanDeclaration" />
     </node>
   </node>
+  <node concept="1YbPZF" id="54dco_FtiDU">
+    <property role="TrG5h" value="typeof_ParameterDeclaration" />
+    <node concept="3clFbS" id="54dco_FtiDV" role="18ibNy">
+      <node concept="1Z5TYs" id="54dco_Ftjg7" role="3cqZAp">
+        <node concept="mw_s8" id="54dco_Ftjgr" role="1ZfhKB">
+          <node concept="1Z2H0r" id="54dco_Ftjgn" role="mwGJk">
+            <node concept="2OqwBi" id="54dco_Ftjsk" role="1Z2MuG">
+              <node concept="1YBJjd" id="54dco_FtjgG" role="2Oq$k0">
+                <ref role="1YBMHb" node="54dco_FtiDX" resolve="parameterDeclaration" />
+              </node>
+              <node concept="3TrEf2" id="54dco_FtjHA" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:54dco_FsDcR" resolve="type" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="54dco_Ftjga" role="1ZfhK$">
+          <node concept="1Z2H0r" id="54dco_FtiE1" role="mwGJk">
+            <node concept="1YBJjd" id="54dco_FtiFV" role="1Z2MuG">
+              <ref role="1YBMHb" node="54dco_FtiDX" resolve="parameterDeclaration" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="54dco_FtiDX" role="1YuTPh">
+      <property role="TrG5h" value="parameterDeclaration" />
+      <ref role="1YaFvo" to="kz24:4kkpCMfUKho" resolve="ParameterDeclaration" />
+    </node>
+  </node>
 </model>
 

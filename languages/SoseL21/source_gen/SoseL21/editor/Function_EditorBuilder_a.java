@@ -148,7 +148,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return LINKS.parameters$_ZuL;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.IntDeclaration$bc;
+      return CONCEPTS.ParameterDeclaration$GV;
     }
 
     private String getSeparatorText(SNode prevNode, SNode nextNode) {
@@ -465,7 +465,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept IntDeclaration$bc = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, "SoseL21.structure.IntDeclaration");
+    /*package*/ static final SConcept ParameterDeclaration$GV = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x4514668c8feb0458L, "SoseL21.structure.ParameterDeclaration");
     /*package*/ static final SInterfaceConcept Statement$YA = MetaAdapterFactory.getInterfaceConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8052L, "SoseL21.structure.Statement");
   }
 

@@ -32,6 +32,10 @@
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
+      <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
+        <property id="1186403713874" name="color" index="Vb096" />
+      </concept>
+      <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -59,7 +63,6 @@
       </concept>
       <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
-      <concept id="1198256887712" name="jetbrains.mps.lang.editor.structure.CellModel_Indent" flags="ng" index="3XFhqQ" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -155,7 +158,6 @@
   <node concept="24kQdi" id="2tELiO03oE8">
     <ref role="1XX52x" to="oiwc:2tELiO03oDW" resolve="AssertStatement" />
     <node concept="3EZMnI" id="2tELiO03oEa" role="2wV5jI">
-      <node concept="3XFhqQ" id="2tELiO03rfa" role="3EZMnx" />
       <node concept="3F0ifn" id="2tELiO03oEk" role="3EZMnx">
         <property role="3F0ifm" value="assert" />
       </node>
@@ -170,6 +172,9 @@
     <node concept="3EZMnI" id="FTm6Jl2O_R" role="2wV5jI">
       <node concept="PMmxH" id="FTm6Jl2OA1" role="3EZMnx">
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+        <node concept="VechU" id="4kkpCMfUrs_" role="3F10Kt">
+          <property role="Vb096" value="fLwANPt/cyan" />
+        </node>
       </node>
       <node concept="3F0ifn" id="FTm6Jl2OA6" role="3EZMnx">
         <property role="3F0ifm" value="-&gt;" />
@@ -191,6 +196,9 @@
     <node concept="3EZMnI" id="FTm6Jl30Iw" role="2wV5jI">
       <node concept="PMmxH" id="FTm6Jl30IE" role="3EZMnx">
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+        <node concept="VechU" id="4kkpCMfUrtt" role="3F10Kt">
+          <property role="Vb096" value="fLwANPt/cyan" />
+        </node>
       </node>
       <node concept="1iCGBv" id="FTm6Jl36a7" role="3EZMnx">
         <ref role="1NtTu8" to="oiwc:FTm6Jl369P" resolve="suite" />

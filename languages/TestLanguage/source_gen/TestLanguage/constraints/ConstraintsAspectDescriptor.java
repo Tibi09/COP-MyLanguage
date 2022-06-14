@@ -22,9 +22,11 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
         return new AssertStatement_Constraints();
       case 1:
         return new ExecuteSigleTestCase_Constraints();
+      case 2:
+        return new TestCase_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d8a7cL), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50c0b92L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d8a7cL), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0xaf9586bd50c0b92L), MetaIdFactory.conceptId(0xd841915f93084767L, 0x8fc4b848d3400fafL, 0x276ac52d000d0102L)).seal();
 }

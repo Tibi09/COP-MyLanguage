@@ -15,6 +15,7 @@
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
     <import index="6xgk" ref="r:6e9ad488-5df2-49e4-8c01-8a7f3812adf7(jetbrains.mps.lang.scopes.runtime)" />
     <import index="tp2v" ref="r:00000000-0000-4000-0000-011c8959032b(jetbrains.mps.baseLanguage.collections.typesystem)" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -140,6 +141,12 @@
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
+      </concept>
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
+      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
+        <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
@@ -719,6 +726,34 @@
           <ref role="ehGHo" to="kz24:5$OfM9zAC1i" resolve="Statement" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="52RCenzSoct">
+    <ref role="13h7C2" to="kz24:2tELiO03x6M" resolve="VariableReference" />
+    <node concept="13i0hz" id="52RCenzSocG" role="13h7CS">
+      <property role="TrG5h" value="myName" />
+      <node concept="3Tm1VV" id="52RCenzSocH" role="1B3o_S" />
+      <node concept="3uibUv" id="52RCenzSocW" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="52RCenzSocJ" role="3clF47">
+        <node concept="3cpWs6" id="52RCenzSodf" role="3cqZAp">
+          <node concept="2OqwBi" id="52RCenzSoLb" role="3cqZAk">
+            <node concept="2OqwBi" id="52RCenzSooM" role="2Oq$k0">
+              <node concept="13iPFW" id="52RCenzSodX" role="2Oq$k0" />
+              <node concept="3TrEf2" id="52RCenzSoz$" role="2OqNvi">
+                <ref role="3Tt5mk" to="kz24:2tELiO03x6N" resolve="variable" />
+              </node>
+            </node>
+            <node concept="3TrcHB" id="52RCenzSoXB" role="2OqNvi">
+              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="52RCenzSocu" role="13h7CW">
+      <node concept="3clFbS" id="52RCenzSocv" role="2VODD2" />
     </node>
   </node>
 </model>
