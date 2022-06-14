@@ -8,6 +8,5 @@ Constraints:
 - declarations in for loop definition are not supported. Please declare the iterator variable outside the loop
 
 Problems:
-- mapping of else part of if
 - functions cannot return parameters
 - pure and non-pure functions (currently only non-pure functions available)
