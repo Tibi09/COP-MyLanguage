@@ -8,5 +8,5 @@ Constraints:
 - declarations in for loop definition are not supported. Please declare the iterator variable outside the loop
 
 Problems:
-- functions cannot return parameters
+- functions cannot return parameters or variables declared inside them
 - pure and non-pure functions (currently only non-pure functions available)
