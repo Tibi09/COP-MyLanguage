@@ -7,6 +7,12 @@ public class wk1 {
   public static void main(String[] args) {
     int a = 1 - 9 * 7;
     boolean altceva = false;
+    if (true) {
+      int b = a;
+    } else {
+      boolean dada = true;
+      boolean nunu = false;
+    }
   }
 
   public void tibi(int par1, boolean par2) {

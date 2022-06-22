@@ -26,7 +26,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
       @Nullable
       @Override
       public ReferenceScopeProvider getScopeProvider() {
-        return ReferenceScopeProvider.fromHierarchy(CONCEPTS.Declarations$52, new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "7356380916942658253"));
+        return ReferenceScopeProvider.fromHierarchy(CONCEPTS.Declarations$52, new SNodePointer("r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)", "1386033394841749947"));
       }
     };
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
