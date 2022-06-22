@@ -10,3 +10,4 @@ Constraints:
 Problems:
 - functions cannot return parameters or variables declared inside them
 - pure and non-pure functions (currently only non-pure functions available)
+- call of functions with parameters
