@@ -51,6 +51,7 @@
         <reference id="6591946374543067572" name="conceptDeclaration" index="aqKnT" />
       </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
+      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -617,6 +618,9 @@
       </node>
       <node concept="3F0ifn" id="3nvff$qMQmV" role="3EZMnx">
         <property role="3F0ifm" value="(" />
+        <node concept="11LMrY" id="GBvyuo6zPI" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F2HdR" id="1cWbwtMjoYp" role="3EZMnx">
         <ref role="1NtTu8" to="kz24:3nvff$qMPBs" resolve="parameters" />
@@ -633,6 +637,9 @@
       </node>
       <node concept="3F0ifn" id="3nvff$qMQnq" role="3EZMnx">
         <property role="3F0ifm" value=")" />
+        <node concept="11L4FC" id="GBvyuo6zPK" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="3nvff$qMQnN" role="3EZMnx">
         <property role="3F0ifm" value=":" />

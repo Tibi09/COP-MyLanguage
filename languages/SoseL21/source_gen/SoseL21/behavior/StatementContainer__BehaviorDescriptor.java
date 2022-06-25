@@ -46,16 +46,15 @@ public final class StatementContainer__BehaviorDescriptor extends BaseBHDescript
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, final SNode child) {
     if (SNodeOperations.getConcept(child) == CONCEPTS.Function$eZ) {
 
-      SNode f = (SNode) child;
+      SNode func = (SNode) child;
 
-      if (SPropertyOperations.getBoolean(f, PROPS.pure$j7xS)) {
+      if (SPropertyOperations.getBoolean(func, PROPS.pure$j7xS)) {
         ListScope c = ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(StatementContainer__BehaviorDescriptor.getStatements_id6on7nvqLDw8.invoke(__thisNode__), CONCEPTS.Declarations$52)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
             return SNodeOperations.getIndexInParent(it) > SNodeOperations.getIndexInParent(child);
           }
         }));
         return c;
-
       }
 
       ListScope c = ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(StatementContainer__BehaviorDescriptor.getStatements_id6on7nvqLDw8.invoke(__thisNode__), CONCEPTS.Declarations$52)).where(new IWhereFilter<SNode>() {
