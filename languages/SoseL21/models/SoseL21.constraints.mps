@@ -124,13 +124,13 @@
                     <node concept="2Xjw5R" id="5$OfM9zB7x2" role="2OqNvi">
                       <node concept="1xMEDy" id="5$OfM9zB7x4" role="1xVPHs">
                         <node concept="chp4Y" id="5$OfM9zB7Dp" role="ri$Ld">
-                          <ref role="cht4Q" to="kz24:5$OfM9zAC02" resolve="Workspace" />
+                          <ref role="cht4Q" to="kz24:3nvff$qMPBp" resolve="Function" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="3Tsc0h" id="5$OfM9zB8mE" role="2OqNvi">
-                    <ref role="3TtcxE" to="kz24:5$OfM9zAC1l" resolve="contents" />
+                  <node concept="3Tsc0h" id="GBvyuo3dPj" role="2OqNvi">
+                    <ref role="3TtcxE" to="kz24:3nvff$qMPBs" resolve="parameters" />
                   </node>
                 </node>
                 <node concept="v3k3i" id="5$OfM9zBrHa" role="2OqNvi">
@@ -484,8 +484,37 @@
   <node concept="1M2fIO" id="1cWbwtMmpMG">
     <ref role="1M2myG" to="kz24:3nvff$qMPBp" resolve="Function" />
     <node concept="3EP7_v" id="2qrqFNS1wL9" role="1MtirG">
-      <node concept="1dDu$B" id="3wKIK3fsMyh" role="3EP$qY">
-        <ref role="1dDu$A" to="kz24:5$OfM9zAHcz" resolve="Declarations" />
+      <node concept="3dgokm" id="GBvyuo2z3d" role="3EP$qY">
+        <node concept="3clFbS" id="GBvyuo2z3f" role="2VODD2">
+          <node concept="3clFbF" id="GBvyuo2z5G" role="3cqZAp">
+            <node concept="2YIFZM" id="GBvyuo2zaP" role="3clFbG">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="2OqwBi" id="GBvyuo2BfO" role="37wK5m">
+                <node concept="2OqwBi" id="GBvyuo2$kx" role="2Oq$k0">
+                  <node concept="2OqwBi" id="GBvyuo2zzP" role="2Oq$k0">
+                    <node concept="2rP1CM" id="GBvyuo2zda" role="2Oq$k0" />
+                    <node concept="2Xjw5R" id="GBvyuo2zZ2" role="2OqNvi">
+                      <node concept="1xMEDy" id="GBvyuo2zZ4" role="1xVPHs">
+                        <node concept="chp4Y" id="GBvyuo35ht" role="ri$Ld">
+                          <ref role="cht4Q" to="kz24:5$OfM9zAC02" resolve="Workspace" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="GBvyuo369w" role="2OqNvi">
+                    <ref role="3TtcxE" to="kz24:5$OfM9zAC1l" resolve="contents" />
+                  </node>
+                </node>
+                <node concept="v3k3i" id="GBvyuo2J70" role="2OqNvi">
+                  <node concept="chp4Y" id="GBvyuo36lk" role="v3oSu">
+                    <ref role="cht4Q" to="kz24:3nvff$qMPBp" resolve="Function" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>

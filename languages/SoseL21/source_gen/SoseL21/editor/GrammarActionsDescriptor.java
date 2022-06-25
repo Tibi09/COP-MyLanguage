@@ -487,6 +487,28 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
       ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
         public Iterable<SubstituteMenuItem> query() {
           List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.Function$eZ;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), Function_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "pure", _context, new DefaultFlagModelAccess(PROPS.pure$j7xS)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
           _context.getEditorMenuTrace().pushTraceInfo();
           _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "SpecialEmptyStatementForReturnExpression", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "3881888444413540375")));
           try {
@@ -954,6 +976,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SConcept BinaryExpression$pO = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0ebb17L, "SoseL21.structure.BinaryExpression");
     /*package*/ static final SConcept ExpressionStatement$jS = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5321d9ecfadfa2d1L, "SoseL21.structure.ExpressionStatement");
     /*package*/ static final SConcept BooleanLiteral$pX = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, "SoseL21.structure.BooleanLiteral");
+    /*package*/ static final SConcept Function$eZ = MetaAdapterFactory.getConcept(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x35df3cf91acb59d9L, "SoseL21.structure.Function");
   }
 
   private static final class PROPS {
@@ -961,6 +984,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SProperty final$SnoT = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x24bb4622de898526L, "final");
     /*package*/ static final SProperty value$sibJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, 0x2d43019ee0a41c2L, "value");
     /*package*/ static final SProperty value$D4vJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, 0x561e0268e531fa1bL, "value");
+    /*package*/ static final SProperty pure$j7xS = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x35df3cf91acb59d9L, 0xb277e279810c9eaL, "pure");
   }
 
   private static final class LINKS {

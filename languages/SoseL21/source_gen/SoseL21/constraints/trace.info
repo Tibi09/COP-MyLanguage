@@ -65,26 +65,39 @@
   </root>
   <root nodeRef="r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)/1386033394841394348">
     <file name="Function_Constraints.java">
-      <node id="1386033394841394348" at="18,33,19,32" concept="8" />
-      <node id="1386033394841394348" at="26,152,27,182" concept="5" />
-      <node id="1386033394841394348" at="33,0,34,0" concept="6" trace="Function$eZ" />
-      <node id="1386033394841394348" at="34,0,35,0" concept="6" trace="Declarations$52" />
-      <node id="1386033394841394348" at="18,0,21,0" concept="0" trace="Function_Constraints#()V" />
-      <node id="1386033394841394348" at="25,0,29,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_DefaultScopeProvider;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="1386033394841394348" at="23,127,29,6" concept="5" />
-      <node id="1386033394841394348" at="22,0,31,0" concept="3" trace="calculateDefaultScopeConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="1386033394841394348" at="18,33,19,32" />
-      <scope id="1386033394841394348" at="26,152,27,182" />
-      <scope id="1386033394841394348" at="18,0,21,0" />
-      <scope id="1386033394841394348" at="25,0,29,0">
+      <node id="1386033394841394348" at="25,33,26,32" concept="8" />
+      <node id="1386033394841394348" at="36,63,37,121" concept="5" />
+      <node id="803749767028552044" at="40,80,41,242" concept="5" />
+      <node id="1386033394841394348" at="49,0,50,0" concept="6" trace="Function$eZ" />
+      <node id="1386033394841394348" at="50,0,51,0" concept="6" trace="Workspace$b9" />
+      <node id="1386033394841394348" at="54,0,55,0" concept="6" trace="contents$6guO" />
+      <node id="1386033394841394348" at="25,0,28,0" concept="0" trace="Function_Constraints#()V" />
+      <node id="1386033394841394348" at="35,0,39,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="1386033394841394348" at="39,0,43,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="1386033394841394348" at="33,152,43,10" concept="5" />
+      <node id="1386033394841394348" at="32,0,45,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_DefaultScopeProvider;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="1386033394841394348" at="30,127,45,6" concept="5" />
+      <node id="1386033394841394348" at="29,0,47,0" concept="3" trace="calculateDefaultScopeConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="1386033394841394348" at="25,33,26,32" />
+      <scope id="1386033394841394348" at="36,63,37,121" />
+      <scope id="1386033394841394348" at="40,80,41,242" />
+      <scope id="1386033394841394348" at="25,0,28,0" />
+      <scope id="1386033394841394348" at="35,0,39,0" />
+      <scope id="1386033394841394348" at="39,0,43,0">
+        <var name="_context" id="1386033394841394348" />
+      </scope>
+      <scope id="1386033394841394348" at="33,152,43,10" />
+      <scope id="1386033394841394348" at="32,0,45,0">
         <var name="checkingNodeContext" id="1386033394841394348" />
         <var name="context" id="1386033394841394348" />
       </scope>
-      <scope id="1386033394841394348" at="23,127,29,6" />
-      <scope id="1386033394841394348" at="22,0,31,0" />
-      <unit id="1386033394841394348" at="32,0,36,0" name="SoseL21.constraints.Function_Constraints$CONCEPTS" />
-      <unit id="1386033394841394348" at="24,15,29,5" name="SoseL21.constraints.Function_Constraints$1" />
-      <unit id="1386033394841394348" at="17,0,37,0" name="SoseL21.constraints.Function_Constraints" />
+      <scope id="1386033394841394348" at="30,127,45,6" />
+      <scope id="1386033394841394348" at="29,0,47,0" />
+      <unit id="1386033394841394348" at="53,0,56,0" name="SoseL21.constraints.Function_Constraints$LINKS" />
+      <unit id="1386033394841394348" at="48,0,52,0" name="SoseL21.constraints.Function_Constraints$CONCEPTS" />
+      <unit id="1386033394841394348" at="34,19,43,9" name="SoseL21.constraints.Function_Constraints$1$1" />
+      <unit id="1386033394841394348" at="31,15,45,5" name="SoseL21.constraints.Function_Constraints$1" />
+      <unit id="1386033394841394348" at="24,0,57,0" name="SoseL21.constraints.Function_Constraints" />
     </file>
   </root>
   <root nodeRef="r:dc0b78b0-99d1-42fb-937e-efb5497908ea(SoseL21.constraints)/203840771064584742">
@@ -242,15 +255,15 @@
     <file name="Reference_Constraints.java">
       <node id="6427831985097170117" at="27,34,28,33" concept="8" />
       <node id="6427831985097170353" at="39,63,40,122" concept="5" />
-      <node id="6427831985097172346" at="43,80,44,246" concept="5" />
+      <node id="6427831985097172346" at="43,80,44,247" concept="5" />
       <node id="6427831985097170117" at="48,6,49,131" concept="4" />
       <node id="6427831985097170353" at="49,131,50,42" concept="1" />
       <node id="6427831985097170117" at="50,42,51,22" concept="5" />
       <node id="6427831985097170117" at="55,0,56,0" concept="6" trace="Reference$_4" />
-      <node id="6427831985097170117" at="56,0,57,0" concept="6" trace="Workspace$b9" />
+      <node id="6427831985097170117" at="56,0,57,0" concept="6" trace="Function$eZ" />
       <node id="6427831985097170117" at="57,0,58,0" concept="6" trace="Declarations$52" />
       <node id="6427831985097170117" at="61,0,62,0" concept="6" trace="variableReference$j9Qc" />
-      <node id="6427831985097170117" at="62,0,63,0" concept="6" trace="contents$6guO" />
+      <node id="6427831985097170117" at="62,0,63,0" concept="6" trace="parameters$_ZuL" />
       <node id="6427831985097170117" at="27,0,30,0" concept="0" trace="Reference_Constraints#()V" />
       <node id="6427831985097170353" at="38,0,42,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
       <node id="6427831985097170353" at="42,0,46,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
@@ -260,7 +273,7 @@
       <node id="6427831985097170117" at="31,0,53,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
       <scope id="6427831985097170117" at="27,34,28,33" />
       <scope id="6427831985097170353" at="39,63,40,122" />
-      <scope id="6427831985097170353" at="43,80,44,246" />
+      <scope id="6427831985097170353" at="43,80,44,247" />
       <scope id="6427831985097170117" at="27,0,30,0" />
       <scope id="6427831985097170353" at="38,0,42,0" />
       <scope id="6427831985097170353" at="42,0,46,0">

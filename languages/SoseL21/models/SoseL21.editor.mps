@@ -600,6 +600,12 @@
   <node concept="24kQdi" id="3nvff$qMPBL">
     <ref role="1XX52x" to="kz24:3nvff$qMPBp" resolve="Function" />
     <node concept="3EZMnI" id="3nvff$qMQmt" role="2wV5jI">
+      <node concept="1kHk_G" id="GBvyuo4cLg" role="3EZMnx">
+        <ref role="1NtTu8" to="kz24:GBvyuo4cBE" resolve="pure" />
+        <node concept="VechU" id="GBvyuo5Gi9" role="3F10Kt">
+          <property role="Vb096" value="fLwANPt/cyan" />
+        </node>
+      </node>
       <node concept="PMmxH" id="3nvff$qMQmB" role="3EZMnx">
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
         <node concept="VechU" id="3nvff$qQem3" role="3F10Kt">
