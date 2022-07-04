@@ -85,7 +85,139 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), IntDeclaration_Editor.class, _context.getEditorContext())) {
                 boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
                 if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "protected", _context, new DefaultFlagModelAccess(PROPS.protected$iZhm)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.IntDeclaration$bc;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), IntDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "public", _context, new DefaultFlagModelAccess(PROPS.public$iSGU)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.IntDeclaration$bc;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), IntDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "private", _context, new DefaultFlagModelAccess(PROPS.private$iYli)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.IntDeclaration$bc;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), IntDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
                   ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "final", _context, new DefaultFlagModelAccess(PROPS.final$ghBA)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.BooleanDeclaration$9c;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), BooleanDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "private", _context, new DefaultFlagModelAccess(PROPS.private$bi1D)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.BooleanDeclaration$9c;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), BooleanDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "protected", _context, new DefaultFlagModelAccess(PROPS.protected$bh5_)));
+                }
+              }
+            }
+          }
+
+          return result;
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+
+          {
+            final SConcept outputConcept = CONCEPTS.BooleanDeclaration$9c;
+
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConceptExactly))) {
+              final SNode parentNode = _context.getParentNode();
+              final SNode substitutedNode = _context.getCurrentTargetNode();
+              for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(outputConcept, _context.getModel(), BooleanDeclaration_Editor.class, _context.getEditorContext())) {
+                boolean applicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                if (applicable) {
+                  ListSequence.fromList(result).addElement(new FlagSubstituteMenuItem(parentNode, _context.getCurrentTargetNode(), subconcept, "public", _context, new DefaultFlagModelAccess(PROPS.public$bgoy)));
                 }
               }
             }
@@ -522,6 +654,22 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }).toListSequence();
         }
       }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Private", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "9201983977794501847")));
+          try {
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
+        }
+      }.query()));
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -889,6 +1037,29 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }.query(_context)));
         }
       }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Private", new SNodePointer("r:1e10eedf-f39b-4b65-b8f7-523bc4e7b326(SoseL21.editor)", "9201983977794501847")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -980,7 +1151,13 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
   }
 
   private static final class PROPS {
+    /*package*/ static final SProperty protected$iZhm = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df386L, "protected");
+    /*package*/ static final SProperty public$iSGU = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df37fL, "public");
+    /*package*/ static final SProperty private$iYli = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df382L, "private");
     /*package*/ static final SProperty final$ghBA = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x2d43019ee09b30fL, "final");
+    /*package*/ static final SProperty private$bi1D = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x7fb403ac715a590eL, "private");
+    /*package*/ static final SProperty protected$bh5_ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x7fb403ac715a590aL, "protected");
+    /*package*/ static final SProperty public$bgoy = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x7fb403ac715a5907L, "public");
     /*package*/ static final SProperty final$SnoT = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8083L, 0x24bb4622de898526L, "final");
     /*package*/ static final SProperty value$sibJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0a41c1L, 0x2d43019ee0a41c2L, "value");
     /*package*/ static final SProperty value$D4vJ = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x561e0268e531fa1aL, 0x561e0268e531fa1bL, "value");

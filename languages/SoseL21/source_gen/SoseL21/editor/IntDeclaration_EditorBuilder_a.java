@@ -98,10 +98,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     jetbrains.mps.nodeEditor.cells.EditorCell_Collection editorCell = new jetbrains.mps.nodeEditor.cells.EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
     editorCell.setCellId("Collection_w0zgnk_a0");
     editorCell.addEditorCell(createAlternation_0());
-    editorCell.addEditorCell(createCustomFactory_3());
-    editorCell.addEditorCell(createProperty_0());
     editorCell.addEditorCell(createAlternation_1());
-    editorCell.addEditorCell(createConstant_2());
+    editorCell.addEditorCell(createAlternation_2());
+    editorCell.addEditorCell(createAlternation_3());
+    editorCell.addEditorCell(createCustomFactory_9());
+    editorCell.addEditorCell(createProperty_0());
+    editorCell.addEditorCell(createAlternation_4());
+    editorCell.addEditorCell(createConstant_5());
     return editorCell;
   }
   private EditorCell createAlternation_0() {
@@ -116,7 +119,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private boolean nodeCondition_w0zgnk_a0a0() {
-    IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.final$ghBA);
+    IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.protected$iZhm);
     if (!(access.read(myNode))) {
       return false;
     }
@@ -128,6 +131,339 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
 
     final EditorCell cell = createConstant_0();
+    EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
+      public EditorCell invoke() {
+        cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.protected$iZhm);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, true);
+          }
+        });
+        cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.protected$iZhm);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, false);
+          }
+        });
+        return cell;
+      }
+    }.invoke();
+    return editorCell;
+  }
+  private EditorCell createCustomFactory_1() {
+    return createCustomFactory_0(getEditorContext(), myNode);
+  }
+  private EditorCell createConstant_0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "protected");
+    editorCell.setCellId("flag_protected");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.orange));
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createSideTransformationCell4_0() {
+    SideTransformationHolderCell editorCell = new SideTransformationHolderCell(getEditorContext(), myNode, null, "flag 'protected'") {
+      @Override
+      public List<MenuPart<TransformationMenuItem, TransformationMenuContext>> createMenuParts() {
+        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a0a0());
+      }
+    };
+    editorCell.setCellId("SideTransformationCell4_w0zgnk_a0a0");
+    return editorCell;
+  }
+  private class GenericMenuPart_a0a0a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
+
+    @NotNull
+    @Override
+    public List<TransformationMenuItem> createItems(final TransformationMenuContext ctx) {
+      List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+      final boolean isApplicable = new Object() {
+        public boolean query() {
+          final SNode node = ctx.getNode();
+          IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.protected$iZhm);
+          boolean applicable = !(access.read(node));
+          applicable &= !(GrammarCellsUtil.isProperty(ctx.getEditorContext().getSelectedCell())) || ctx.getMenuLocation() != MenuLocations.RIGHT_SIDE_TRANSFORM;
+          return applicable;
+        }
+      }.query();
+      if (isApplicable) {
+        GrammarCellsSideTransformTransformationMenuItem item = new GrammarCellsSideTransformTransformationMenuItem(ctx) {
+          public String getDescriptionText(String pattern) {
+            return null;
+          }
+          public String getMatchingText(String pattern) {
+            return "protected";
+          }
+
+          @Override
+          public void execute(@NotNull String pattern) {
+            doSubstitute(pattern);
+          }
+          public SNode doSubstitute(String pattern) {
+            SNode node = SNodeOperations.cast(ctx.getNode(), CONCEPTS.IntDeclaration$bc);
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.protected$iZhm);
+            access.write(node, true);
+            SelectionUtil.selectLabelCellAnSetCaret(ctx.getEditorContext(), node, "flag_protected", -1);
+            return null;
+          }
+          public SAbstractConcept getOutputConcept() {
+            return CONCEPTS.IntDeclaration$bc;
+          }
+        };
+        ListSequence.fromList(result).addElement(item);
+      }
+      return result;
+    }
+  }
+  private EditorCell createAlternation_1() {
+    boolean alternationCondition = true;
+    alternationCondition = nodeCondition_w0zgnk_a1a0();
+    EditorCell editorCell = null;
+    if (alternationCondition) {
+      editorCell = createCustomFactory_3();
+    } else {
+      editorCell = createSideTransformationCell4_1();
+    }
+    return editorCell;
+  }
+  private boolean nodeCondition_w0zgnk_a1a0() {
+    IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.public$iSGU);
+    if (!(access.read(myNode))) {
+      return false;
+    }
+
+
+    return true;
+  }
+  private EditorCell createCustomFactory_2(final EditorContext editorContext, final SNode node) {
+
+
+    final EditorCell cell = createConstant_1();
+    EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
+      public EditorCell invoke() {
+        cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.public$iSGU);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, true);
+          }
+        });
+        cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.public$iSGU);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, false);
+          }
+        });
+        return cell;
+      }
+    }.invoke();
+    return editorCell;
+  }
+  private EditorCell createCustomFactory_3() {
+    return createCustomFactory_2(getEditorContext(), myNode);
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "public");
+    editorCell.setCellId("flag_public");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.orange));
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createSideTransformationCell4_1() {
+    SideTransformationHolderCell editorCell = new SideTransformationHolderCell(getEditorContext(), myNode, null, "flag 'public'") {
+      @Override
+      public List<MenuPart<TransformationMenuItem, TransformationMenuContext>> createMenuParts() {
+        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a1a0());
+      }
+    };
+    editorCell.setCellId("SideTransformationCell4_w0zgnk_a1a0");
+    return editorCell;
+  }
+  private class GenericMenuPart_a0a1a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
+
+    @NotNull
+    @Override
+    public List<TransformationMenuItem> createItems(final TransformationMenuContext ctx) {
+      List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+      final boolean isApplicable = new Object() {
+        public boolean query() {
+          final SNode node = ctx.getNode();
+          IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.public$iSGU);
+          boolean applicable = !(access.read(node));
+          applicable &= !(GrammarCellsUtil.isProperty(ctx.getEditorContext().getSelectedCell())) || ctx.getMenuLocation() != MenuLocations.RIGHT_SIDE_TRANSFORM;
+          return applicable;
+        }
+      }.query();
+      if (isApplicable) {
+        GrammarCellsSideTransformTransformationMenuItem item = new GrammarCellsSideTransformTransformationMenuItem(ctx) {
+          public String getDescriptionText(String pattern) {
+            return null;
+          }
+          public String getMatchingText(String pattern) {
+            return "public";
+          }
+
+          @Override
+          public void execute(@NotNull String pattern) {
+            doSubstitute(pattern);
+          }
+          public SNode doSubstitute(String pattern) {
+            SNode node = SNodeOperations.cast(ctx.getNode(), CONCEPTS.IntDeclaration$bc);
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.public$iSGU);
+            access.write(node, true);
+            SelectionUtil.selectLabelCellAnSetCaret(ctx.getEditorContext(), node, "flag_public", -1);
+            return null;
+          }
+          public SAbstractConcept getOutputConcept() {
+            return CONCEPTS.IntDeclaration$bc;
+          }
+        };
+        ListSequence.fromList(result).addElement(item);
+      }
+      return result;
+    }
+  }
+  private EditorCell createAlternation_2() {
+    boolean alternationCondition = true;
+    alternationCondition = nodeCondition_w0zgnk_a2a0();
+    EditorCell editorCell = null;
+    if (alternationCondition) {
+      editorCell = createCustomFactory_5();
+    } else {
+      editorCell = createSideTransformationCell4_2();
+    }
+    return editorCell;
+  }
+  private boolean nodeCondition_w0zgnk_a2a0() {
+    IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.private$iYli);
+    if (!(access.read(myNode))) {
+      return false;
+    }
+
+
+    return true;
+  }
+  private EditorCell createCustomFactory_4(final EditorContext editorContext, final SNode node) {
+
+
+    final EditorCell cell = createConstant_2();
+    EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
+      public EditorCell invoke() {
+        cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.private$iYli);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, true);
+          }
+        });
+        cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
+          public void execute(EditorContext editorContext) {
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.private$iYli);
+            access.write(node, false);
+            GrammarCellsUtil.selectPrevNextOnSameLine(editorContext, false);
+          }
+        });
+        return cell;
+      }
+    }.invoke();
+    return editorCell;
+  }
+  private EditorCell createCustomFactory_5() {
+    return createCustomFactory_4(getEditorContext(), myNode);
+  }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "private");
+    editorCell.setCellId("flag_private");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.orange));
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createSideTransformationCell4_2() {
+    SideTransformationHolderCell editorCell = new SideTransformationHolderCell(getEditorContext(), myNode, null, "flag 'private'") {
+      @Override
+      public List<MenuPart<TransformationMenuItem, TransformationMenuContext>> createMenuParts() {
+        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a2a0());
+      }
+    };
+    editorCell.setCellId("SideTransformationCell4_w0zgnk_a2a0");
+    return editorCell;
+  }
+  private class GenericMenuPart_a0a2a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
+
+    @NotNull
+    @Override
+    public List<TransformationMenuItem> createItems(final TransformationMenuContext ctx) {
+      List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+      final boolean isApplicable = new Object() {
+        public boolean query() {
+          final SNode node = ctx.getNode();
+          IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.private$iYli);
+          boolean applicable = !(access.read(node));
+          applicable &= !(GrammarCellsUtil.isProperty(ctx.getEditorContext().getSelectedCell())) || ctx.getMenuLocation() != MenuLocations.RIGHT_SIDE_TRANSFORM;
+          return applicable;
+        }
+      }.query();
+      if (isApplicable) {
+        GrammarCellsSideTransformTransformationMenuItem item = new GrammarCellsSideTransformTransformationMenuItem(ctx) {
+          public String getDescriptionText(String pattern) {
+            return null;
+          }
+          public String getMatchingText(String pattern) {
+            return "private";
+          }
+
+          @Override
+          public void execute(@NotNull String pattern) {
+            doSubstitute(pattern);
+          }
+          public SNode doSubstitute(String pattern) {
+            SNode node = SNodeOperations.cast(ctx.getNode(), CONCEPTS.IntDeclaration$bc);
+            IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.private$iYli);
+            access.write(node, true);
+            SelectionUtil.selectLabelCellAnSetCaret(ctx.getEditorContext(), node, "flag_private", -1);
+            return null;
+          }
+          public SAbstractConcept getOutputConcept() {
+            return CONCEPTS.IntDeclaration$bc;
+          }
+        };
+        ListSequence.fromList(result).addElement(item);
+      }
+      return result;
+    }
+  }
+  private EditorCell createAlternation_3() {
+    boolean alternationCondition = true;
+    alternationCondition = nodeCondition_w0zgnk_a3a0();
+    EditorCell editorCell = null;
+    if (alternationCondition) {
+      editorCell = createCustomFactory_7();
+    } else {
+      editorCell = createSideTransformationCell4_3();
+    }
+    return editorCell;
+  }
+  private boolean nodeCondition_w0zgnk_a3a0() {
+    IFlagModelAccess access = new DefaultFlagModelAccess(PROPS.final$ghBA);
+    if (!(access.read(myNode))) {
+      return false;
+    }
+
+
+    return true;
+  }
+  private EditorCell createCustomFactory_6(final EditorContext editorContext, final SNode node) {
+
+
+    final EditorCell cell = createConstant_3();
     EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
       public EditorCell invoke() {
         cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
@@ -149,10 +485,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }.invoke();
     return editorCell;
   }
-  private EditorCell createCustomFactory_1() {
-    return createCustomFactory_0(getEditorContext(), myNode);
+  private EditorCell createCustomFactory_7() {
+    return createCustomFactory_6(getEditorContext(), myNode);
   }
-  private EditorCell createConstant_0() {
+  private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "final");
     editorCell.setCellId("flag_final");
     Style style = new StyleImpl();
@@ -161,17 +497,17 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createSideTransformationCell4_0() {
+  private EditorCell createSideTransformationCell4_3() {
     SideTransformationHolderCell editorCell = new SideTransformationHolderCell(getEditorContext(), myNode, null, "flag 'final'") {
       @Override
       public List<MenuPart<TransformationMenuItem, TransformationMenuContext>> createMenuParts() {
-        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a0a0());
+        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a3a0());
       }
     };
-    editorCell.setCellId("SideTransformationCell4_w0zgnk_a0a0");
+    editorCell.setCellId("SideTransformationCell4_w0zgnk_a3a0");
     return editorCell;
   }
-  private class GenericMenuPart_a0a0a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
+  private class GenericMenuPart_a0a3a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
 
     @NotNull
     @Override
@@ -215,7 +551,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return result;
     }
   }
-  private EditorCell createCustomFactory_2(final EditorContext editorContext, final SNode node) {
+  private EditorCell createCustomFactory_8(final EditorContext editorContext, final SNode node) {
 
 
     final EditorCell cell = createReadOnlyModelAccessor_0();
@@ -229,8 +565,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.getStyle().putAll(style);
     return editorCell;
   }
-  private EditorCell createCustomFactory_3() {
-    return createCustomFactory_2(getEditorContext(), myNode);
+  private EditorCell createCustomFactory_9() {
+    return createCustomFactory_8(getEditorContext(), myNode);
   }
   private EditorCell createReadOnlyModelAccessor_0() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
@@ -272,35 +608,35 @@ import org.jetbrains.mps.openapi.language.SConcept;
       getCellFactory().popCellContext();
     }
   }
-  private EditorCell createAlternation_1() {
+  private EditorCell createAlternation_4() {
     boolean alternationCondition = true;
-    alternationCondition = nodeCondition_w0zgnk_a3a0();
+    alternationCondition = nodeCondition_w0zgnk_a6a0();
     EditorCell editorCell = null;
     if (alternationCondition) {
       editorCell = createCollection_1();
     } else {
-      editorCell = createSideTransformationCell4_1();
+      editorCell = createSideTransformationCell4_4();
     }
     return editorCell;
   }
-  private boolean nodeCondition_w0zgnk_a3a0() {
+  private boolean nodeCondition_w0zgnk_a6a0() {
     return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.value$wd6G)).isNotEmpty();
   }
   private EditorCell createCollection_1() {
     jetbrains.mps.nodeEditor.cells.EditorCell_Collection editorCell = new jetbrains.mps.nodeEditor.cells.EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_w0zgnk_a3a0");
+    editorCell.setCellId("Collection_w0zgnk_a6a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    if (nodeCondition_w0zgnk_a0a3a0()) {
-      editorCell.addEditorCell(createCustomFactory_5());
+    if (nodeCondition_w0zgnk_a0a6a0()) {
+      editorCell.addEditorCell(createCustomFactory_11());
     }
     return editorCell;
   }
-  private boolean nodeCondition_w0zgnk_a0a3a0() {
+  private boolean nodeCondition_w0zgnk_a0a6a0() {
     return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.value$wd6G)).isNotEmpty();
   }
-  private EditorCell createCustomFactory_4(final EditorContext editorContext, final SNode node) {
+  private EditorCell createCustomFactory_10(final EditorContext editorContext, final SNode node) {
 
     if (!(new Object() {
       public boolean showWrapped() {
@@ -310,7 +646,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return jetbrains.mps.nodeEditor.cells.EditorCell_Collection.createVertical(editorContext, node);
     }
 
-    final EditorCell cell = createCustomFactory_7();
+    final EditorCell cell = createCustomFactory_13();
     EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
       public EditorCell invoke() {
         cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
@@ -336,10 +672,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }.invoke();
     return editorCell;
   }
-  private EditorCell createCustomFactory_5() {
-    return createCustomFactory_4(getEditorContext(), myNode);
+  private EditorCell createCustomFactory_11() {
+    return createCustomFactory_10(getEditorContext(), myNode);
   }
-  private EditorCell createCustomFactory_6(final EditorContext editorContext, final SNode node) {
+  private EditorCell createCustomFactory_12(final EditorContext editorContext, final SNode node) {
 
     if (!(new Object() {
       public boolean showWrapped() {
@@ -372,34 +708,34 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }.invoke();
     return editorCell;
   }
-  private EditorCell createCustomFactory_7() {
-    return createCustomFactory_6(getEditorContext(), myNode);
+  private EditorCell createCustomFactory_13() {
+    return createCustomFactory_12(getEditorContext(), myNode);
   }
   private EditorCell createCollection_2() {
     jetbrains.mps.nodeEditor.cells.EditorCell_Collection editorCell = new jetbrains.mps.nodeEditor.cells.EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_w0zgnk_a0a0d0a");
+    editorCell.setCellId("Collection_w0zgnk_a0a0g0a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_1());
+    editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }
-  private EditorCell createConstant_1() {
+  private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "=");
-    editorCell.setCellId("Constant_w0zgnk_a0a0a3a0");
+    editorCell.setCellId("Constant_w0zgnk_a0a0a6a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new valueSingleRoleHandler_w0zgnk_b0a0a3a0(myNode, LINKS.value$wd6G, getEditorContext());
+    SingleRoleCellProvider provider = new valueSingleRoleHandler_w0zgnk_b0a0a6a0(myNode, LINKS.value$wd6G, getEditorContext());
     return provider.createCell();
   }
-  private static class valueSingleRoleHandler_w0zgnk_b0a0a3a0 extends SingleRoleCellProvider {
+  private static class valueSingleRoleHandler_w0zgnk_b0a0a6a0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public valueSingleRoleHandler_w0zgnk_b0a0a3a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public valueSingleRoleHandler_w0zgnk_b0a0a6a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -446,17 +782,17 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return "<no value>";
     }
   }
-  private EditorCell createSideTransformationCell4_1() {
+  private EditorCell createSideTransformationCell4_4() {
     SideTransformationHolderCell editorCell = new SideTransformationHolderCell(getEditorContext(), myNode, null, "grammar.optional for IntDeclaration.value") {
       @Override
       public List<MenuPart<TransformationMenuItem, TransformationMenuContext>> createMenuParts() {
-        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a3a0());
+        return ListSequence.fromListAndArray(new ArrayList<MenuPart<TransformationMenuItem, TransformationMenuContext>>(), new GenericMenuPart_a0a6a0());
       }
     };
-    editorCell.setCellId("SideTransformationCell4_w0zgnk_a3a0");
+    editorCell.setCellId("SideTransformationCell4_w0zgnk_a6a0");
     return editorCell;
   }
-  private class GenericMenuPart_a0a3a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
+  private class GenericMenuPart_a0a6a0 implements MenuPart<TransformationMenuItem, TransformationMenuContext> {
 
     @NotNull
     @Override
@@ -485,9 +821,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return result;
     }
   }
-  private EditorCell createConstant_2() {
+  private EditorCell createConstant_5() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ";");
-    editorCell.setCellId("Constant_w0zgnk_e0a");
+    editorCell.setCellId("Constant_w0zgnk_h0a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.PUNCTUATION_LEFT, true);
     editorCell.getStyle().putAll(style);
@@ -496,6 +832,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
+    /*package*/ static final SProperty protected$iZhm = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df386L, "protected");
+    /*package*/ static final SProperty public$iSGU = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df37fL, "public");
+    /*package*/ static final SProperty private$iYli = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x7fb403ac714df382L, "private");
     /*package*/ static final SProperty final$ghBA = MetaAdapterFactory.getProperty(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x59343f22639a8057L, 0x2d43019ee09b30fL, "final");
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }

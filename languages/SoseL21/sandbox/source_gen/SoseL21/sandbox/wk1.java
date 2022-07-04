@@ -7,6 +7,8 @@ public class wk1 {
   public static void main(String[] args) {
     int a = 1;
     boolean ceva = true;
+    String f = "test";
+    String bla = "interesant";
     func1();
     tibi(8);
     tibi(a);
@@ -23,7 +25,18 @@ public class wk1 {
     var1 = 2;
     return;
   }
-  public static void func2(boolean a, int b) {
-    return;
+  public static boolean func2(boolean bla, int blabla) {
+    while (bla) {
+      if (blabla > 1) {
+        blabla = 2;
+      }
+      int l = 2;
+    }
+    if (blabla > 1) {
+      if (bla) {
+        bla = true;
+      }
+    }
+    return true;
   }
 }
