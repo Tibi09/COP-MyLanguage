@@ -983,5 +983,12 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="5SngmbXYcqJ">
+    <property role="3GE5qa" value="class" />
+    <ref role="13h7C2" to="kz24:5SngmbXXbPu" resolve="Extends" />
+    <node concept="13hLZK" id="5SngmbXYcqK" role="13h7CW">
+      <node concept="3clFbS" id="5SngmbXYcqL" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

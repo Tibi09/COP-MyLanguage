@@ -1665,103 +1665,101 @@
       </scope>
     </file>
     <file name="check_ClassDefinition_NonTypesystemRule.java">
-      <node id="9201983977795643999" at="29,0,30,0" concept="11" trace="LOG" />
-      <node id="9201983977795649279" at="32,128,33,146" concept="8" />
-      <node id="9201983977795688735" at="35,75,36,31" concept="8" />
-      <node id="9201983977795727755" at="38,11,39,70" concept="8" />
-      <node id="9201983977795727755" at="39,70,40,232" concept="8" />
-      <node id="9201983977796013278" at="43,7,44,0" concept="10" />
-      <node id="9201983977796032315" at="45,79,46,31" concept="8" />
-      <node id="9201983977796035324" at="48,11,49,70" concept="8" />
-      <node id="9201983977796035324" at="49,70,50,232" concept="8" />
-      <node id="9201983977797216790" at="54,5,55,0" concept="10" />
-      <node id="9201983977797217056" at="55,0,56,157" concept="8" />
-      <node id="9201983977797368791" at="57,62,58,173" concept="3" />
-      <node id="9201983977797276745" at="60,9,61,68" concept="8" />
-      <node id="9201983977797276745" at="61,68,62,246" concept="8" />
-      <node id="9201983977795643999" at="67,50,68,39" concept="9" />
-      <node id="9201983977795643999" at="70,68,71,102" concept="9" />
-      <node id="9201983977795643999" at="73,30,74,17" concept="9" />
-      <node id="9201983977795643999" at="78,0,79,0" concept="11" trace="content$aNuf" />
-      <node id="9201983977795643999" at="82,0,83,0" concept="11" trace="Declarations$52" />
-      <node id="9201983977795643999" at="83,0,84,0" concept="11" trace="IntDeclaration$bc" />
-      <node id="9201983977795643999" at="84,0,85,0" concept="11" trace="BooleanDeclaration$9c" />
-      <node id="9201983977795643999" at="85,0,86,0" concept="11" trace="ClassConstructor$Tb" />
-      <node id="9201983977795643999" at="86,0,87,0" concept="11" trace="ClassDefinition$nq" />
-      <node id="9201983977795643999" at="90,0,91,0" concept="11" trace="private$iYli" />
-      <node id="9201983977795643999" at="91,0,92,0" concept="11" trace="protected$iZhm" />
-      <node id="9201983977795643999" at="92,0,93,0" concept="11" trace="public$iSGU" />
-      <node id="9201983977795643999" at="93,0,94,0" concept="11" trace="private$bi1D" />
-      <node id="9201983977795643999" at="94,0,95,0" concept="11" trace="protected$bh5_" />
-      <node id="9201983977795643999" at="95,0,96,0" concept="11" trace="public$bgoy" />
-      <node id="9201983977795643999" at="96,0,97,0" concept="11" trace="name$MnvL" />
-      <node id="9201983977795643999" at="30,0,32,0" concept="2" trace="check_ClassDefinition_NonTypesystemRule#()V" />
-      <node id="9201983977795643999" at="67,0,70,0" concept="7" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
-      <node id="9201983977795643999" at="70,0,73,0" concept="7" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-      <node id="9201983977795643999" at="73,0,76,0" concept="7" trace="overrides#()Z" />
-      <node id="9201983977795727755" at="37,535,41,11" concept="0" />
-      <node id="9201983977796035324" at="47,535,51,11" concept="0" />
-      <node id="9201983977797276745" at="59,142,63,9" concept="0" />
-      <node id="9201983977795690212" at="36,31,42,9" concept="6" />
-      <node id="9201983977796035322" at="46,31,52,9" concept="6" />
-      <node id="9201983977797255427" at="58,173,64,7" concept="6" />
-      <node id="9201983977795681201" at="34,53,43,7" concept="6" />
-      <node id="9201983977796013398" at="44,0,53,7" concept="6" />
-      <node id="9201983977797255204" at="56,157,65,5" concept="5" />
-      <node id="9201983977795680010" at="33,146,54,5" concept="5" />
-      <node id="9201983977795643999" at="32,0,67,0" concept="7" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-      <scope id="9201983977795643999" at="30,52,30,52" />
-      <scope id="9201983977795643999" at="67,50,68,39" />
-      <scope id="9201983977795643999" at="70,68,71,102" />
-      <scope id="9201983977795643999" at="73,30,74,17" />
-      <scope id="9201983977795643999" at="30,0,32,0" />
-      <scope id="9201983977795727755" at="38,11,40,232">
+      <node id="9201983977795649279" at="27,128,28,146" concept="8" />
+      <node id="9201983977795688735" at="30,75,31,31" concept="8" />
+      <node id="9201983977795727755" at="33,11,34,70" concept="8" />
+      <node id="9201983977795727755" at="34,70,35,232" concept="8" />
+      <node id="9201983977796013278" at="38,7,39,0" concept="10" />
+      <node id="9201983977796032315" at="40,79,41,31" concept="8" />
+      <node id="9201983977796035324" at="43,11,44,70" concept="8" />
+      <node id="9201983977796035324" at="44,70,45,232" concept="8" />
+      <node id="9201983977797216790" at="49,5,50,0" concept="10" />
+      <node id="9201983977797217056" at="50,0,51,157" concept="8" />
+      <node id="9201983977797276745" at="54,9,55,68" concept="8" />
+      <node id="9201983977797276745" at="55,68,56,246" concept="8" />
+      <node id="9201983977795643999" at="61,50,62,39" concept="9" />
+      <node id="9201983977795643999" at="64,68,65,102" concept="9" />
+      <node id="9201983977795643999" at="67,30,68,17" concept="9" />
+      <node id="9201983977795643999" at="72,0,73,0" concept="11" trace="content$aNuf" />
+      <node id="9201983977795643999" at="76,0,77,0" concept="11" trace="Declarations$52" />
+      <node id="9201983977795643999" at="77,0,78,0" concept="11" trace="IntDeclaration$bc" />
+      <node id="9201983977795643999" at="78,0,79,0" concept="11" trace="BooleanDeclaration$9c" />
+      <node id="9201983977795643999" at="79,0,80,0" concept="11" trace="ClassConstructor$Tb" />
+      <node id="9201983977795643999" at="80,0,81,0" concept="11" trace="ClassDefinition$nq" />
+      <node id="9201983977795643999" at="84,0,85,0" concept="11" trace="private$iYli" />
+      <node id="9201983977795643999" at="85,0,86,0" concept="11" trace="protected$iZhm" />
+      <node id="9201983977795643999" at="86,0,87,0" concept="11" trace="public$iSGU" />
+      <node id="9201983977795643999" at="87,0,88,0" concept="11" trace="private$bi1D" />
+      <node id="9201983977795643999" at="88,0,89,0" concept="11" trace="protected$bh5_" />
+      <node id="9201983977795643999" at="89,0,90,0" concept="11" trace="public$bgoy" />
+      <node id="9201983977795643999" at="90,0,91,0" concept="11" trace="name$MnvL" />
+      <node id="9201983977795643999" at="25,0,27,0" concept="2" trace="check_ClassDefinition_NonTypesystemRule#()V" />
+      <node id="9201983977795643999" at="61,0,64,0" concept="7" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="9201983977795643999" at="64,0,67,0" concept="7" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="9201983977795643999" at="67,0,70,0" concept="7" trace="overrides#()Z" />
+      <node id="9201983977795727755" at="32,535,36,11" concept="0" />
+      <node id="9201983977796035324" at="42,535,46,11" concept="0" />
+      <node id="9201983977797276745" at="53,142,57,9" concept="0" />
+      <node id="9201983977795690212" at="31,31,37,9" concept="6" />
+      <node id="9201983977796035322" at="41,31,47,9" concept="6" />
+      <node id="9201983977797255427" at="52,62,58,7" concept="6" />
+      <node id="9201983977797255204" at="51,157,59,5" concept="5" />
+      <node id="9201983977795681201" at="29,53,38,7" concept="6" />
+      <node id="9201983977796013398" at="39,0,48,7" concept="6" />
+      <node id="9201983977795680010" at="28,146,49,5" concept="5" />
+      <node id="9201983977795643999" at="27,0,61,0" concept="7" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="9201983977795643999" at="25,52,25,52" />
+      <scope id="9201983977795643999" at="61,50,62,39" />
+      <scope id="9201983977795643999" at="64,68,65,102" />
+      <scope id="9201983977795643999" at="67,30,68,17" />
+      <scope id="9201983977795643999" at="25,0,27,0" />
+      <scope id="9201983977795727755" at="33,11,35,232">
         <var name="_reporter_2309309498" id="9201983977795727755" />
         <var name="errorTarget" id="9201983977795727755" />
       </scope>
-      <scope id="9201983977796035324" at="48,11,50,232">
+      <scope id="9201983977796035324" at="43,11,45,232">
         <var name="_reporter_2309309498" id="9201983977796035324" />
         <var name="errorTarget" id="9201983977796035324" />
       </scope>
-      <scope id="9201983977797276745" at="60,9,62,246">
+      <scope id="9201983977797276745" at="54,9,56,246">
         <var name="_reporter_2309309498" id="9201983977797276745" />
         <var name="errorTarget" id="9201983977797276745" />
       </scope>
-      <scope id="9201983977795643999" at="67,0,70,0" />
-      <scope id="9201983977795643999" at="70,0,73,0">
+      <scope id="9201983977795643999" at="61,0,64,0" />
+      <scope id="9201983977795643999" at="64,0,67,0">
         <var name="argument" id="9201983977795643999" />
       </scope>
-      <scope id="9201983977795643999" at="73,0,76,0" />
-      <scope id="9201983977795690214" at="37,535,41,11" />
-      <scope id="9201983977796035323" at="47,535,51,11" />
-      <scope id="9201983977797255429" at="59,142,63,9" />
-      <scope id="9201983977795681203" at="35,75,42,9">
+      <scope id="9201983977795643999" at="67,0,70,0" />
+      <scope id="9201983977795690214" at="32,535,36,11" />
+      <scope id="9201983977796035323" at="42,535,46,11" />
+      <scope id="9201983977797255429" at="53,142,57,9" />
+      <scope id="9201983977797255210" at="52,62,58,7" />
+      <scope id="9201983977795681203" at="30,75,37,9">
         <var name="d" id="9201983977795688738" />
       </scope>
-      <scope id="9201983977796013400" at="45,79,52,9">
+      <scope id="9201983977796013400" at="40,79,47,9">
         <var name="d" id="9201983977796032318" />
       </scope>
-      <scope id="9201983977797255210" at="57,62,64,7" />
-      <scope id="9201983977797255204" at="56,157,65,5">
+      <scope id="9201983977797255204" at="51,157,59,5">
         <var name="constr" id="9201983977797255206" />
       </scope>
-      <scope id="9201983977795680016" at="34,53,53,7" />
-      <scope id="9201983977795680010" at="33,146,54,5">
+      <scope id="9201983977795680016" at="29,53,48,7" />
+      <scope id="9201983977795680010" at="28,146,49,5">
         <var name="decl" id="9201983977795680012" />
       </scope>
-      <scope id="9201983977795644000" at="32,128,65,5">
+      <scope id="9201983977795644000" at="27,128,59,5">
         <var name="constructors" id="9201983977797217059" />
         <var name="decls" id="9201983977795649282" />
       </scope>
-      <scope id="9201983977795643999" at="32,0,67,0">
+      <scope id="9201983977795643999" at="27,0,61,0">
         <var name="classDefinition" id="9201983977795643999" />
         <var name="status" id="9201983977795643999" />
         <var name="typeCheckingContext" id="9201983977795643999" />
       </scope>
-      <unit id="9201983977795643999" at="77,0,80,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$LINKS" />
-      <unit id="9201983977795643999" at="81,0,88,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$CONCEPTS" />
-      <unit id="9201983977795643999" at="89,0,98,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$PROPS" />
-      <unit id="9201983977795643999" at="28,0,99,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule" />
+      <unit id="9201983977795643999" at="71,0,74,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$LINKS" />
+      <unit id="9201983977795643999" at="75,0,82,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$CONCEPTS" />
+      <unit id="9201983977795643999" at="83,0,92,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule$PROPS" />
+      <unit id="9201983977795643999" at="24,0,93,0" name="SoseL21.typesystem.check_ClassDefinition_NonTypesystemRule" />
     </file>
   </root>
 </debug-info>

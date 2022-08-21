@@ -4,8 +4,6 @@ package SoseL21.typesystem;
 
 import jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime;
 import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
-import org.apache.log4j.Logger;
-import org.apache.log4j.LogManager;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
@@ -16,8 +14,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
-import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
-import org.apache.log4j.Level;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -26,7 +22,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class check_ClassDefinition_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  private static final Logger LOG = LogManager.getLogger(check_ClassDefinition_NonTypesystemRule.class);
   public check_ClassDefinition_NonTypesystemRule() {
   }
   public void applyRule(final SNode classDefinition, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
@@ -55,7 +50,6 @@ public class check_ClassDefinition_NonTypesystemRule extends AbstractNonTypesyst
 
     Iterable<SNode> constructors = SNodeOperations.ofConcept(SLinkOperations.getChildren(classDefinition, LINKS.content$aNuf), CONCEPTS.ClassConstructor$Tb);
     for (SNode constr : Sequence.fromIterable(constructors)) {
-      LoggingRuntime.logMsgView(Level.INFO, "" + SPropertyOperations.getString(classDefinition, PROPS.name$MnvL), check_ClassDefinition_NonTypesystemRule.class, null, null);
       if (!(SPropertyOperations.getString(constr, PROPS.name$MnvL).equals(SPropertyOperations.getString(classDefinition, PROPS.name$MnvL)))) {
         {
           final MessageTarget errorTarget = new NodeMessageTarget();

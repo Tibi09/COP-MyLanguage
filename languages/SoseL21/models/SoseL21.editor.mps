@@ -922,6 +922,24 @@
         <node concept="3F0A7n" id="7YO0ULLbjhI" role="3EZMnx">
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
+        <node concept="_tjkj" id="5SngmbXULSC" role="3EZMnx">
+          <node concept="3EZMnI" id="5SngmbY1n0E" role="_tjki">
+            <node concept="3F1sOY" id="2sX$Fo4wNs3" role="3EZMnx">
+              <ref role="1NtTu8" to="kz24:2sX$Fo4wNpi" resolve="ext" />
+            </node>
+            <node concept="1iCGBv" id="5SngmbY1n10" role="3EZMnx">
+              <ref role="1NtTu8" to="kz24:5SngmbY1mX$" resolve="extends" />
+              <node concept="1sVBvm" id="5SngmbY1n12" role="1sWHZn">
+                <node concept="3F0A7n" id="5SngmbY1n1d" role="2wV5jI">
+                  <property role="1Intyy" value="true" />
+                  <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+            <node concept="2iRfu4" id="5SngmbY1n0H" role="2iSdaV" />
+            <node concept="VPM3Z" id="5SngmbY1n0I" role="3F10Kt" />
+          </node>
+        </node>
         <node concept="3F0ifn" id="7YO0ULLbjhQ" role="3EZMnx">
           <property role="3F0ifm" value="{" />
         </node>
@@ -1029,6 +1047,19 @@
       <node concept="3F0ifn" id="7YO0ULLnOo7" role="3EZMnx">
         <property role="3F0ifm" value="}" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="5SngmbXYcMF">
+    <property role="3GE5qa" value="class" />
+    <ref role="1XX52x" to="kz24:5SngmbXXbPu" resolve="Extends" />
+    <node concept="3EZMnI" id="5SngmbXYcMH" role="2wV5jI">
+      <node concept="3F0ifn" id="5SngmbXYcMR" role="3EZMnx">
+        <property role="3F0ifm" value="extends" />
+        <node concept="VechU" id="2sX$Fo4xJYN" role="3F10Kt">
+          <property role="Vb096" value="fLwANPp/orange" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="5SngmbXYcMK" role="2iSdaV" />
     </node>
   </node>
 </model>

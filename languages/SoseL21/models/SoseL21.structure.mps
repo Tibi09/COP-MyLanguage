@@ -672,6 +672,17 @@
       <property role="20kJfa" value="modifier" />
       <ref role="20lvS9" node="7YO0ULLg4vG" resolve="ClassModifiers" />
     </node>
+    <node concept="1TJgyj" id="2sX$Fo4wNpi" role="1TKVEi">
+      <property role="IQ2ns" value="2827577451515950674" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ext" />
+      <ref role="20lvS9" node="5SngmbXXbPu" resolve="Extends" />
+    </node>
+    <node concept="1TJgyj" id="5SngmbY1mX$" role="1TKVEi">
+      <property role="IQ2ns" value="6779959657453940580" />
+      <property role="20kJfa" value="extends" />
+      <ref role="20lvS9" node="7YO0ULLbjcN" resolve="ClassDefinition" />
+    </node>
   </node>
   <node concept="PlHQZ" id="7YO0ULLepVL">
     <property role="EcuMT" value="9201983977793625841" />
@@ -748,6 +759,13 @@
     <node concept="PrWs8" id="7YO0ULLnOot" role="PzmwI">
       <ref role="PrY4T" node="6on7nvqLDvW" resolve="StatementContainer" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5SngmbXXbPu">
+    <property role="EcuMT" value="6779959657452846430" />
+    <property role="3GE5qa" value="class" />
+    <property role="TrG5h" value="Extends" />
+    <property role="34LRSv" value="extends" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
 </model>
 

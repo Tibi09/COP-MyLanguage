@@ -27,6 +27,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EqualsExpression;
   private ConceptPresentation props_Expression;
   private ConceptPresentation props_ExpressionStatement;
+  private ConceptPresentation props_Extends;
   private ConceptPresentation props_ForLoop;
   private ConceptPresentation props_Function;
   private ConceptPresentation props_FunctionCall;
@@ -183,6 +184,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ExpressionStatement = cpb.create();
         }
         return props_ExpressionStatement;
+      case LanguageConceptSwitch.Extends:
+        if (props_Extends == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("extends");
+          props_Extends = cpb.create();
+        }
+        return props_Extends;
       case LanguageConceptSwitch.ForLoop:
         if (props_ForLoop == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

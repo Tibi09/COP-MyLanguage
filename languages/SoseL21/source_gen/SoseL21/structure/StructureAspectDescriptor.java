@@ -31,6 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEqualsExpression = createDescriptorForEqualsExpression();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptExpressionStatement = createDescriptorForExpressionStatement();
+  /*package*/ final ConceptDescriptor myConceptExtends = createDescriptorForExtends();
   /*package*/ final ConceptDescriptor myConceptForLoop = createDescriptorForForLoop();
   /*package*/ final ConceptDescriptor myConceptFunction = createDescriptorForFunction();
   /*package*/ final ConceptDescriptor myConceptFunctionCall = createDescriptorForFunctionCall();
@@ -76,7 +77,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActualParameters, myConceptArithmeticBinaryExpression, myConceptAssignmentExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptClassBody, myConceptClassConstructor, myConceptClassDefinition, myConceptClassModifiers, myConceptDeclarations, myConceptDivExpression, myConceptElseStatement, myConceptEmptyStatement, myConceptEqualsExpression, myConceptExpression, myConceptExpressionStatement, myConceptForLoop, myConceptFunction, myConceptFunctionCall, myConceptGreaterEqualsExpression, myConceptGreaterThanExpression, myConceptIfStatement, myConceptIntDeclaration, myConceptLiterals, myConceptLowerEqualsExpression, myConceptLowerThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptMyBooleanType, myConceptMyIntegerType, myConceptMyType, myConceptMyVoidType, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptParameterDeclaration, myConceptPlusExpression, myConceptPrivate, myConceptProtected, myConceptPublic, myConceptReference, myConceptSpecialEmptyStatementForReturnExpression, myConceptStatement, myConceptStatementContainer, myConceptStringDeclaration, myConceptVariableReference, myConceptWhileLoop, myConceptWorkspace);
+    return Arrays.asList(myConceptActualParameters, myConceptArithmeticBinaryExpression, myConceptAssignmentExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanDeclaration, myConceptBooleanLiteral, myConceptClassBody, myConceptClassConstructor, myConceptClassDefinition, myConceptClassModifiers, myConceptDeclarations, myConceptDivExpression, myConceptElseStatement, myConceptEmptyStatement, myConceptEqualsExpression, myConceptExpression, myConceptExpressionStatement, myConceptExtends, myConceptForLoop, myConceptFunction, myConceptFunctionCall, myConceptGreaterEqualsExpression, myConceptGreaterThanExpression, myConceptIfStatement, myConceptIntDeclaration, myConceptLiterals, myConceptLowerEqualsExpression, myConceptLowerThanExpression, myConceptMinusExpression, myConceptMulExpression, myConceptMyBooleanType, myConceptMyIntegerType, myConceptMyType, myConceptMyVoidType, myConceptNotEqualsExpression, myConceptNumberLiteral, myConceptParameterDeclaration, myConceptPlusExpression, myConceptPrivate, myConceptProtected, myConceptPublic, myConceptReference, myConceptSpecialEmptyStatementForReturnExpression, myConceptStatement, myConceptStatementContainer, myConceptStringDeclaration, myConceptVariableReference, myConceptWhileLoop, myConceptWorkspace);
   }
 
   @Override
@@ -119,6 +120,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptExpression;
       case LanguageConceptSwitch.ExpressionStatement:
         return myConceptExpressionStatement;
+      case LanguageConceptSwitch.Extends:
+        return myConceptExtends;
       case LanguageConceptSwitch.ForLoop:
         return myConceptForLoop;
       case LanguageConceptSwitch.Function:
@@ -288,8 +291,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x66171d77dac697fcL);
     b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/9201983977792811827");
     b.version(2);
+    b.associate("extends", 0x5e174162fe056f64L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x7fb403ac712d3333L).optional(true).origin("6779959657453940580").done();
     b.aggregate("content", 0x7fb403ac712d33adL).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x7fb403ac71399ef1L).optional(true).ordered(true).multiple(true).origin("9201983977792811949").done();
     b.aggregate("modifier", 0x7fb403ac714047f8L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x7fb403ac714047ecL).optional(true).ordered(true).multiple(false).origin("9201983977794062328").done();
+    b.aggregate("ext", 0x273d92b604833652L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5e174162fdf4bd5eL).optional(true).ordered(true).multiple(false).origin("2827577451515950674").done();
     b.alias("class");
     return b.create();
   }
@@ -360,6 +365,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/5990308591223939793");
     b.version(2);
     b.aggregate("expr", 0x5321d9ecfadfa2d2L).target(0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x2d43019ee0d757bL).optional(false).ordered(true).multiple(false).origin("5990308591223939794").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExtends() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("SoseL21", "Extends", 0x675036cf295d4c04L, 0xa4188a54769c9d5cL, 0x5e174162fdf4bd5eL);
+    b.class_(false, false, false);
+    b.origin("r:31c28278-4e6a-438d-a071-6fda0e31af53(SoseL21.structure)/6779959657452846430");
+    b.version(2);
+    b.alias("extends");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForForLoop() {

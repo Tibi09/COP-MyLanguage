@@ -97,6 +97,9 @@
         <node concept="VPM3Z" id="2tELiO03g4p" role="3F10Kt" />
         <node concept="3F0ifn" id="2tELiO03g4$" role="3EZMnx">
           <property role="3F0ifm" value="Test Suite:" />
+          <node concept="VechU" id="6aHMDnBP0hH" role="3F10Kt">
+            <property role="Vb096" value="fLwANPp/orange" />
+          </node>
         </node>
         <node concept="3F0A7n" id="2tELiO03g4I" role="3EZMnx">
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -116,6 +119,9 @@
     <node concept="3EZMnI" id="2tELiO03g5H" role="2wV5jI">
       <node concept="3F0ifn" id="2tELiO03g5R" role="3EZMnx">
         <property role="3F0ifm" value="test" />
+        <node concept="VechU" id="6aHMDnBP0ks" role="3F10Kt">
+          <property role="Vb096" value="fLwANPp/orange" />
+        </node>
       </node>
       <node concept="3F0A7n" id="2tELiO03g61" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -160,6 +166,9 @@
     <node concept="3EZMnI" id="2tELiO03oEa" role="2wV5jI">
       <node concept="3F0ifn" id="2tELiO03oEk" role="3EZMnx">
         <property role="3F0ifm" value="assert" />
+        <node concept="VechU" id="6aHMDnBOz1Q" role="3F10Kt">
+          <property role="Vb096" value="fLwANPp/orange" />
+        </node>
       </node>
       <node concept="3F1sOY" id="2tELiO03oEu" role="3EZMnx">
         <ref role="1NtTu8" to="oiwc:2tELiO03oDZ" resolve="expr" />
